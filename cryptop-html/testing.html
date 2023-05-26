@@ -1,0 +1,19 @@
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+              <asp:Label ID="Label1" runat="server" Text="Continue as a"></asp:Label><br />
+            <asp:DropDownList ID="DropDownList1" runat="server"> 
+                <asp:ListItem>Fan</asp:ListItem>
+                <asp:ListItem>Club Representative</asp:ListItem>
+                <asp:ListItem>Stadium Manager</asp:ListItem>
+                <asp:ListItem>Sports Association Manager</asp:ListItem>
+                <asp:ListItem>System Admin</asp:ListItem>
+            </asp:DropDownList><br /><br />
+            <asp:Button ID="Button1" runat="server" OnClick="login" Text="LOG IN" />
+            <asp:Button ID="Button2" runat="server" OnClick="register" Text="REGISTER" /> 
+        </div>
+    </form>
+</body>
