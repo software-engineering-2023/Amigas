@@ -29,10 +29,15 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <script defer src="activePage.js"></script>
+   
+    <div style="background-color: white;">
+		You are logged in
+	  </div>
 
 </head>
 
 <body>
+
     <div class="hero_area">
         <!-- header section strats -->
         <header class="header_section">
@@ -64,14 +69,7 @@
                                         <span>Wallet</span> <img src="images/wallet.png" alt="" />
                                     </a>
                                 </li>
-                                <li class="nav-item">
-
-                                    <a class="nav-link" href="login.html"> Login</a>
-
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="signup.html"> Sign Up</a>
-                                </li>
+                                
                             </ul>
                             <div class="user_option">
                                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -85,6 +83,7 @@
         </header>
         <!-- end header section -->
        
+
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
@@ -155,10 +154,35 @@
                     </h5>
                     <p>
                         – Credit card application<br />
-                        – Credit card(s) payment and history<br />
+
+                        – <button id="CCpaymentHistory" onclick="javascript:CCtranHis()"> Credit card(s) payment and history
+
+                        </button>
+                        <script type="text/javascript">
+    
+    
+                            function CCtranHis() {
+                                location.href = "CCPayHistory.html";
+
+                            }
+                        </script>
+
                         – Credit card Theft Management<br />
                         – Loan application<br />
                         – Loan payment
+                        <button id="My points" onclick="javascript:Points()"> My Points
+
+                        </button>
+                        <script type="text/javascript">
+    
+    
+                            function Points() {
+                                location.href = "Points.html";
+
+                            }
+                        </script>
+
+
                     </p>
                 </div>
 
