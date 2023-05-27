@@ -52,7 +52,7 @@
                             <ul class="navbar-nav  ">
                                 <li class="nav-item">
 
-                                    <a class="nav-link" href="ApplyCC.html"> Apply for Credit Card</a>
+                                    <a class="nav-link" href="ApplyCLoan.html"> Apply for Car Loan</a>
 
                                 </li>
                             </ul>
@@ -78,25 +78,47 @@
         </div>
 
         <div class="container">
+
+           
             <label for="name"><b>Name</b></label>
             <input type="text" id="Name" placeholder="Name"  required>
 
-            <label for="Mobile Number"><b>MobileNumber</b></label>
+            <label for="mbl"><b>MobileNumber</b></label>
             <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
 
-            <label for="Email"><b>Email</b></label>
-            <input  type="text" id="Email" placeholder="Email"  required> <br/>
+            <label for="mail"><b>E-mail</b></label>
+            <input  type="text" id="E-mail" placeholder="E-mail"  required> <br/>
 
-            <label for="NationalID"><b>NationalID</b></label>
-            <input  type="text" id="NationalID" placeholder="NationalID"  required> <br/>
+            <label for="NID"><b>National ID</b></label>
+            <input  type="text" id="National ID" placeholder="National ID"  required> <br/>
 
-            <label for="Customer"><b>Amigas Customer?</b></label>
+            <b>Upload Driver's License</b>
+
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+            </form>
+
+            <b>Upload Utility Bill</b>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+            </form>
+
+            <b>Upload Proof of Income</b>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+            </form>
+
+
+            <label for="cust"><b>Amigas Customer?</b></label>
             <select name="Customer?" id="Customer">
             <option value="yes">yes</option>
             <option value="no">no</option>
             </select> <br/>
 
-            <label for="Customer Type"><b>CustomerType</b></label>
+            <label for="Ctype"><b>Customer Type</b></label>
             <select name="Customer Type" id="Customer Type">
             <option value="Payroll with Amigas">PayrollBank</option>
             <option value="Payroll with another bank">Payrollanother</option>
@@ -104,31 +126,40 @@
             <option value="Self-employed">Self-employed</option>
             </select> <br/>
 
-              <header>
-                <b>Net Monthly Income</b>
-            </header>
-            <body>
-                <div class="value left">Min 3,000 EGP</div>
-                <input type="range" id="scale" name="scale" min="3000" max="100000" value="3000" oninput="updateValue()">
-                <div class="value right">Max 100,000 EGP</div>
-                <p id="scaleValue">3,000 EGP</p>
-            
-                <script>
-                    function updateValue() {
-                        var value = document.getElementById("scale").value;
-                        document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
-                    }
-                </script>
-            </body>
-
             <label for="City"><b>City</b></label>
             <input  type="text" id="City" placeholder="City"  required>
 
             <label for="Area"><b>Area</b></label>
             <input  type="text" id="Area" placeholder="Area"  required>
 
-            <label for="Cardtype"><b>Card Type</b></label>
-            <input  type="text" id="CatdType" placeholder="CardType"  required>
+            <div class="wrapper-range">
+                <header>
+                    <b>Net Monthly Income</b>
+                </header>
+                <div class="sliderValue">
+                 <span>3,000</span>
+                </div>  <br/>
+
+                <div class="field">   
+                <div class="value left">3,000</div>
+                    <input type="range" min="3,000" max="100,000" value="3,000" steps="1">
+                <div class="value right">100,000</div>
+              </div>
+
+              <div class="wrapper-range">
+                <header>
+                    <b>Requested Loan Amount</b>
+                </header>
+                <div class="sliderValue">
+                 <span>0</span>
+                </div>  <br/>
+
+                <div class="field">   
+                <div class="value left">0</div>
+                    <input type="range" min="0" max="2,500,000" value="0" steps="1">
+                <div class="value right">2,500,000</div>
+              </div>
+            </div> <br/>
 
             <label for="Jobtitle"><b>Job Title</b></label>
             <input  type="text" id="Job Title" placeholder="Job Title"  required>
@@ -148,47 +179,12 @@
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
 
-                 
-            <button type="button" onclick="checkFields()">Apply</button>
-	        </form>
-
-	<div id="popup" style="display:none;">
-		<p>Request Sent!</p>
-		<button onclick="hidePopup()">OK</button>
-	</div>
-
-	<script>
-		function checkFields() {
-            
-            var name = document.getElementById("name").value;
-			var MobileNumber = document.getElementById("MobileNumber").value;
-			var Email = document.getElementById("email").value;
-            var NationalID = document.getElementById("NationalID").value;
-            var AmigasCutomer = document.getElementById("NationalID").value;
-            var CustomerType = document.getElementById("CustomerType").value;
-            var NetMonthlyIncome = document.getElementById("Net Monthly Income").value;
-            var City = document.getElementById("City").value;
-            var Area = document.getElementById("Area").value;
-            var CardType = document.getElementById("CardType").value;
-            var Jobtitle = document.getElementById("Jobtitle").value;
-            
+                
 
 
-			if (dueDate && reminderTime && billName && reminderInterval) {
-				showPopup();
-			} else {
-				alert("Please fill in all fields.");
-			}
-		}
 
-		function showPopup() {
-			document.getElementById('popup').style.display = 'block';
-		}
-
-		function hidePopup() {
-			document.getElementById('popup').style.display = 'none';
-		}
-	</script>
+            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Apply</button>
+            </form>
      
     </section>
     <!-- end how section -->
