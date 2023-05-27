@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -12,7 +11,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Choose Retailer</title>
+  <title>View Points Balance</title>
 
   <!-- slider stylesheet -->
   <!-- slider stylesheet -->
@@ -79,51 +78,17 @@
 
     </header>
     <!-- end header section -->
+
+  </div>
+
+  <div style="background-color: white; font-size: 24px; margin-bottom: 180px;">
+    Your Points Balance is 1300 points
+  </div>
+  <a href="WhichMa7alPoints.html"><button style=
+    "width: 150px; height: 70px; font-size: 16px; margin-top: 10px;">redeem my points</button></a>
+    <div style="background-color: white; font-size: 24px; margin-bottom: 50px;">
     </div>
 
-<div>
-  <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
-    
-  </div>
-    <form>
-      <label for="retailer">Select a retailer: </label>
-      <select id="retailer" name="retailerName">
-        <option value="Carrefour">Carrefour</option>
-        <option value="Seoudi">Seoudi</option>
-        <option value="Faces">Faces</option>
-        <option value="Zara">Zara</option>
-      </select>
-    <br>
-      <label for="points">Enter the number of points you want to redeem:</label>
-      <input type="number" id="points" name="points" required>
-    
-     <br>
-     <button id = "submit" type="submit" onClick = "javascript:validPoints()" style= 
-        "width: 150px; height: 70px; font-size: 16px; margin-top: 10px;">Redeem Points</button></a>
-
-        <div style="background-color: white; font-size: 24px; margin-bottom: 50px;">
-    </form>
-    
-    <script>
-      function validPoints(){
-        
-        if (document.getElementById("points").value <= 0 ){
-        alert ("Invalid number of points, please enter a number large than 0");
-        
-      }
-       else if (document.getElementById("points").value > 1300){
-        alert ("Not sufficient balance. Please enter a value less than or equal to " + 1300 + ".");
-       }
-       else if ((document.getElementById("points").value <= 1300) && (document.getElementById("points").value > 0)){
-       window.open("mabrookPoints.html", "_blank");
-       }
-      }
-    </script>
-    <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
-    
-    </div>
-  </div>
-  </div>
 <!-- app section -->
 
 <section class="app_section">
