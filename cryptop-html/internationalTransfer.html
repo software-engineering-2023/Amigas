@@ -84,16 +84,19 @@
        
 
         <div class="container">
-            <label for="uname"><b>Username</b></label>
+            <label for="uname"><b>Bank account number (To transfer from)</b></label>
             <input type="text" id="Username" placeholder="Enter Username"  required>
 
-            <label for="psw"><b>Password</b></label>
-            <input  type="password" id="Password" placeholder="Enter Password"  required>
+            <label for="psw"><b>IBAN</b></label>
+            <input  type="text" id="Password" placeholder="Enter IBAN"  required>
 
             <label for="psw"><b>Amount</b></label>
             <input  type="number" id="amount" placeholder="Enter amount"  required>
+   
+          <label for="psw"><b>Currency of current amount</b></label>
+            <input  type="text" id="currencycurr" placeholder="Enter currency"  required>
 
-            <label for="psw"><b>Currency</b></label>
+            <label for="psw"><b>Currency to transfer with</b></label>
             <input  type="text" id="currency" placeholder="Enter currency"  required>
 
             <label for="psw"><b>Reciever's name</b></label>
@@ -101,6 +104,7 @@
             
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
+            <label for="psw"><b>Please note there is an exchange rate of 30.88 EGP.</b></label>
 
           
 
@@ -110,8 +114,20 @@
                  var x= parseInt.getElementById("amount");
 
                 function loginfunc() {
+                  if(getElementById(currencycurr)=="EGP"){
+                    var x= parseInt.getElementById("amount")/30.88;
+                  }
+                  else {
+                    var x= parseInt.getElementById("amount")*30.88;
+
+                  }
                  alert("Amount transferred to " + document.getElementById("name") + "is equal to" + x );
-                }
+
+                  }
+
+
+
+                
             </script>
            
         </div>
