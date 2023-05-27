@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Credit Card Bill Payment</title>
+	<script>
+		function payBill() {
+			// Get the user input values
+			let billAmount = parseFloat(document.getElementById("bill-amount").value);
+			let paymentAmount = parseFloat(document.getElementById("payment-amount").value);
+
+			// Calculate the remaining balance after payment
+			let remainingBalance = billAmount - paymentAmount;
+
+			// Display a message to the user indicating whether the payment was successful
+			if (paymentAmount > billAmount) {
+				alert("The payment amount exceeds the bill amount. Please enter a valid payment amount.");
+			} else if (paymentAmount === billAmount) {
+				alert("The bill has been paid in full. Thank you for your payment.");
+			} else if (paymentAmount < billAmount) {
+				alert("The payment of " + paymentAmount.toFixed(2) + " has been processed. The remaining balance is " + remainingBalance.toFixed(2) + ".");
+			} else {
+				alert("Please enter a valid payment amount.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Credit Card Bill Payment</h1>
+	<p>Enter the bill amount and payment amount to pay your credit card bill:</p>
+	<label for="bill-amount">Bill Amount:</label>
+	<input type="number" id="bill-amount" step="0.01"><br><br>
+	<label for="payment-amount">Payment Amount:</label>
+	<input type="number" id="payment-amount" step="0.01"><br><br>
+	<button onclick="payBill()">Pay Bill</button>
+</body>
+</html>
