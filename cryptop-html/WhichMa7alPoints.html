@@ -1,4 +1,3 @@
-Which ma7al points
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +12,7 @@ Which ma7al points
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Transaction History</title>
+  <title>Choose Retailer</title>
 
   <!-- slider stylesheet -->
   <!-- slider stylesheet -->
@@ -80,7 +79,48 @@ Which ma7al points
 
     </header>
     <!-- end header section -->
+    </div>
 
+<div>
+  <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
+    
+  </div>
+    <form>
+      <label for="retailer">Select a retailer: </label>
+      <select id="retailer" name="retailerName">
+        <option value="Carrefour">Carrefour</option>
+        <option value="Seoudi">Seoudi</option>
+        <option value="Faces">Faces</option>
+        <option value="Zara">Zara</option>
+      </select>
+    <br>
+      <label for="points">Enter the number of points you want to redeem:</label>
+      <input type="number" id="points" name="points" required>
+    
+     <br>
+     <button id = "submit" type="submit" onClick = "javascript:validPoints()" style= 
+        "width: 150px; height: 70px; font-size: 16px; margin-top: 10px;">Redeem Points</button></a>
+
+        <div style="background-color: white; font-size: 24px; margin-bottom: 50px;">
+    </form>
+    <script>
+      function validPoints(){
+        if (document.getElementById("points").value <= 0 )
+        alert ("Invalid number of points, please enter a number large than 0");
+
+       else if (document.getElementById("points").value > 1300)
+        alert ("Not sufficient balance. Please enter a value less than or equal to " + 1300 + ".");
+
+       else if ((document.getElementById("points").value <= 1300) && (document.getElementById("points").value > 0))
+       console.log("Points entered: " + points);
+       location.href ="mabrookPoints.html";
+       
+      }
+    </script>
+    <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
+    
+    </div>
+  </div>
   </div>
 <!-- app section -->
 
