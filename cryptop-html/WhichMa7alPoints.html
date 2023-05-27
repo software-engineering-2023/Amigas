@@ -103,18 +103,20 @@
 
         <div style="background-color: white; font-size: 24px; margin-bottom: 50px;">
     </form>
+    
     <script>
       function validPoints(){
-        if (document.getElementById("points").value <= 0 )
+        
+        if (document.getElementById("points").value <= 0 ){
         alert ("Invalid number of points, please enter a number large than 0");
-
-       else if (document.getElementById("points").value > 1300)
+        
+      }
+       else if (document.getElementById("points").value > 1300){
         alert ("Not sufficient balance. Please enter a value less than or equal to " + 1300 + ".");
-
-       else if ((document.getElementById("points").value <= 1300) && (document.getElementById("points").value > 0))
-       console.log("Points entered: " + points);
-       location.href ="mabrookPoints.html";
-       
+       }
+       else if ((document.getElementById("points").value <= 1300) && (document.getElementById("points").value > 0)){
+       window.open("mabrookPoints.html", "_blank");
+       }
       }
     </script>
     <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
