@@ -29,15 +29,10 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <script defer src="activePage.js"></script>
-   
-    <div style="background-color: white;">
-		You are logged in
-	  </div>
 
 </head>
 
 <body>
-
     <div class="hero_area">
         <!-- header section strats -->
         <header class="header_section">
@@ -45,7 +40,7 @@
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <a class="navbar-brand" href="index.html">
                         <span>
-                           Amigas Bank
+                            Amigas Bank
                         </span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -69,7 +64,14 @@
                                         <span>Wallet</span> <img src="images/wallet.png" alt="" />
                                     </a>
                                 </li>
-                                
+                                <li class="nav-item">
+
+                                    <a class="nav-link" href="login.html"> Login</a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signup.html"> Sign Up</a>
+                                </li>
                             </ul>
                             <div class="user_option">
                                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -82,201 +84,53 @@
             </div>
         </header>
         <!-- end header section -->
-       
+        
+    </div>
 
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
             <h2>
-                What would you like to do?
+                Please enter your problem below
             </h2>
         </div>
-        <div class="how_container">
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod1" onclick="javascript:func1()">
-                        Users and Information Management System
+      
+       
 
-                    </button>
-                    <script type="text/javascript">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="Username" placeholder="Enter Username"  required>
 
+            <label for="psw"><b>Password</b></label>
+            <input  type="password" id="Password" placeholder="Enter Password"  required>
 
-                        function func1() {
-
-                            location.href = "module1.html";
-                        }
-                    </script>
-
-                </div>
-                <div class="detail-box">
-                    <h5>
-                        General and Announcements
-                    </h5>
-                    <p> 
-                        – Customer on-boarding process <br />
-                        – Opening a new account<br />
-                        – Client-bank communication and announcements<br />
-                        <button id="transactionHistory" onclick="javascript:tranHis()"> Transaction Hisory
-
-                        </button>
-                        <script type="text/javascript">
-    
-    
-                            function tranHis() {
-                                location.href = "transactionHistory.html";
-
-                            }
-                        </script>
-                    </p>
-
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod2" onclick="javascript:func2()">
-
-                        Credit Cards and Loans
-
-                    </button>
-                </div>
-                <script type="text/javascript">
+            <label for="uname"><b>Enter your email (We will respond via e-mail)</b></label>
+            <input type="text" id="email" placeholder="Enter E-mail"  required>
 
 
-                    function func2() {
-
-                        location.href = "module2.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Credit Cards and Loans
-
-                    </h5>
-                    <p>
-                        – Credit card application<br />
-
-                        – <button id="CCpaymentHistory" onclick="javascript:CCtranHis()"> Credit card(s) payment and history
-
-                        </button>
-                        <script type="text/javascript">
-    
-    
-                            function CCtranHis() {
-                                location.href = "CCPayHistory.html";
-
-                            }
-                        </script>
-
-                        – Credit card Theft Management<br />
-                        – Loan application<br />
-                        – Loan payment
-                        <button id="My points" onclick="javascript:Points()"> My Points
-
-                        </button>
-                        <script type="text/javascript">
-    
-    
-                            function Points() {
-                                location.href = "Points.html";
-
-                            }
-                        </script>
+            <label for="uname"><b>Describe your problem in detail</b></label> <br />
+            <td><textarea type="text" id='w4' style="height:200px; width:1000px;font-size:14pt"></textarea></td>
+            <button id="myButton" onclick="javascript:problemfunc()" class="float-left submit-button">Submit</button>
+            </form>
+            <script type="text/javascript">
 
 
-                    </p>
-                </div>
-
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod3" onclick="javascript:func3()">
-                        Personal Financial Management
-                    </button>
-
-                </div>
-                <script type="text/javascript">
-
-
-                    function func3() {
-
-                        location.href = "module3.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Financial Management
-                    </h5>
-                    <p>
-                        – Account(s) details<br />
-                        – Account(s) history and activity<br />
-                        – Bank Transfers<br />
-                        – Cheque submission
-
-                    </p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod4" onclick="javascript:func4()">
-                        Bill Payment and Donations
-                    </button>
-                </div>
-                <script type="text/javascript">
-
-
-                    function func4() {
-
-                        location.href = "module4.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Payments
-                    </h5>
-                    <p>
-                        – Pay bills through bank and 3rd party applications<br />
-                        – Donate to charities
-                    </p>
-                </div>
-            </div>
+                function problemfunc() {
+                    alert("Thank you for submitting. We will check the problem and get back to you via your e-mail.");
+                }
+            </script>
+           
         </div>
-        <div class="btn-box">
-            <a href="">
-                Read More
-            </a>
-        </div>
+        
+                
+         
+
+           
+
+     
     </section>
     <!-- end how section -->
-    <!-- about section -->
-
-    <section class="about_section layout_padding-bottom">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    About Amigas Bank
-                </h2>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="images/about-img.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim
-                    </p>
-                    <div class="btn-box">
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end about section -->
+    
     <!-- app section -->
 
     <section class="app_section">
@@ -288,8 +142,7 @@
                             Our Powerful app to connect it all
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam
+                            Download the app now to get everything on your phone!
                         </p>
                         <div class="download_box">
                             <h5>
@@ -316,36 +169,7 @@
     </section>
 
     <!-- end app section -->
-    <!-- auto section -->
-
-    <section class="auto_section layout_padding">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Start Automatic Now
-                </h2>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="images/auto-img.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim
-                    </p>
-                    <div class="btn-box">
-                        <a href="">
-                            Register Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end auto section -->
+    
     <!-- client section -->
 
     <section class="client_section layout_padding-bottom">
@@ -418,7 +242,7 @@
                         <div class="info_logo">
                             <a href="index.html">
                                 <span>
-                                  Amigas Bank
+                                 Amigas Bank
                                 </span>
                             </a>
                         </div>
