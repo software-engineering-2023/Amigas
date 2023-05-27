@@ -112,20 +112,19 @@
             </form>
             <script type="text/javascript">
                  var x= parseInt.getElementById("amount");
-
-                function loginfunc() {
-                  if(document.getElementById(currencycurr)=="EGP"){
+                 if(document.getElementById(currencycurr)=="EGP"){
                      x= parseInt.getElementById("amount")/30.88;
-                     alert("Amount transferred to " + document.getElementById("name") + "is equal to" + x );
                   }
                   else {
                      x= parseInt.getElementById("amount")*30.88;
+                  }
+                function loginfunc() {
                      alert("Amount transferred to " + document.getElementById("name") + "is equal to" + x );
 
                   }
                 
 
-                  }
+                  
 
 
 
