@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Amigas Bank</title>
+ <!-- Basic -->
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <!-- Mobile Metas -->
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ <!-- Site Metas -->
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="author" content="" />
+
+ <title>Amigas Bank</title>
+
+ <!-- slider stylesheet -->
+ <!-- slider stylesheet -->
+ <link rel="stylesheet" type="text/css"
+       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+ <!-- bootstrap core css -->
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+ <!-- fonts style -->
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+ <!-- Custom styles for this template -->
+ <link href="css/style.css" rel="stylesheet" />
+ <!-- responsive style -->
+ <link href="css/responsive.css" rel="stylesheet" />
+ <script defer src="activePage.js"></script>
+
+ <div style="background-color: white;">
+     You are logged in
+   </div>
+
 </head>
-<body>
+
+<body >
+
+ <div class="hero_area" style="background-color:#ffffff;">
+     <!-- header section strats -->
+     <header class="header_section">
+         <div class="container-fluid">
+             <nav class="navbar navbar-expand-lg custom_nav-container ">
+                 <a class="navbar-brand" href="index.html">
+                     <span>
+                        Amigas Bank
+                     </span>
+                 </a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                         <ul class="navbar-nav  ">
+                            
+                             <li class="nav-item">
+                                 <a class="nav-link" href="index.html">
+                                     <span>Logout</span>
+                                 </a>
+                             </li>
+                             
+                         </ul>
+                     </div>
+                 </div>
+             </nav>
+         </div>
+     </header>
+ </div>
+
+ <section class="how_section layout_padding">
+    <div class="heading_container">
+        <h2>
+            What would you like to do
+        </h2>
+    </div>
+    <div class="how_container">
+        <div class="box">
+            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:viewIssues()">
+                View client issues
+            </div>
+            <script type="text/javascript">
+                function viewIssues() 
+                {
+                    location.href = "viewNonTechnicalIssues.html";
+
+                }
+            </script>
+        </div>
+
+        <div class="box">
+            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:viewLoanRequests()">
+                view loan requests
+            </div>
+            <script type="text/javascript">
+                function viewLoanRequests() 
+                {
+                    location.href = "viewLoanRequests.html";
+
+                }
+            </script>
+        </div>
+    </div>
+ </section>
 
 </body>
 </html>
+

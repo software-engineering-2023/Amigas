@@ -36,9 +36,9 @@
 
 </head>
 
-<body>
+<body >
 
-    <div class="hero_area">
+    <div class="hero_area" style="background-color:#ffffff;">
         <!-- header section strats -->
         <header class="header_section">
             <div class="container-fluid">
@@ -57,54 +57,162 @@
                             <ul class="navbar-nav  ">
                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="wallet1.html">
-                                        <span>Wallet</span> <img src="images/wallet.png" alt="" />
+                                    <a class="nav-link" href="index.html">
+                                        <span>Logout</span>
                                     </a>
-                                </li>
-
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html"> Log out <span class="sr-only">(current)</span></a>
                                 </li>
                                 
                             </ul>
-                            <div class="user_option">
+                            <!-- <div class="user_option">
                                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                                     <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </nav>
             </div>
         </header>
+    </div>
         <!-- end header section -->
        
 
     <!-- how section -->
     <section class="how_section layout_padding">
-        <div class="heading_container">
+        <div class="heading_container" >
             <h2>
                 What would you like to do?
             </h2>
         </div>
-        <div class="how_container">
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod1" onclick="javascript:func1()">
-                        Users and Information Management System
+        <div class="how_container" >
+            <div class="General & Announcements" style="position: relative;  left: -150pt;">
+                <!-- <div class="img-box"> -->
 
-                    </button>
-                    <script type="text/javascript">
+                    <label id="mod1" style="font-weight: bold; font-size: 20pt;">
+                       General & Announcements
+                    </label>
+                    <div class="box" style=" width:50pt; height: 50pt;" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="openNewAccount"  style = "height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:openAcc()" >
+                                Open new account
+                             </button> 
+                             <script type="text/javascript">
+                                function openAcc() 
+                                {
+                                    location.href = "OpenAcc.html";
+    
+                                }
+                            </script>
+                             
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="closeAccount"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:closeAcc()">
+                               Close Account
+                             </button> 
+                             <script type="text/javascript">
+                                function closeAcc() 
+                                {
+                                    location.href = "CloseAcc.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewAccount"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewAcc()">
+                               View account details
+                             </button> 
+                             <script type="text/javascript">
+                                function viewAcc() 
+                                {
+                                    location.href = "OpenAcc.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewTransactions"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewTransactions()">
+                                View bank transactions
+                             </button>
+                             <script type="text/javascript">
+                                function viewTransactions() 
+                                {
+                                    location.href = "transactionHistory.html";
+    
+                                }
+                            </script> 
+                             
+            
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewNotification"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewNotifications()">
+                                View Notifications
+                             </button> 
+                             <script type="text/javascript">
+                                function viewNotifications() 
+                                {
+                                    location.href = "OpenAcc.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewReminders"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewReminders()">
+                                View Reminders
+                             </button> 
+                             <script type="text/javascript">
+                                function viewReminders() 
+                                {
+                                   
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="setReminders"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:setReminders()">
+                                Set Reminders
+                             </button> 
+                             <script type="text/javascript">
+                                function setReminders() 
+                                {
+                                    location.href = "setReminders.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box" style="background-color:green; width:150pt; height: 5pt">
+                           
+                        </div>
+                    </div>
+                     <!--script type="text/javascript">
 
 
                         function func1() {
 
                             location.href = "module1.html";
                         }
-                    </script>
+                    </script> -->
 
-                </div>
-                <div class="detail-box">
+                <!-- </div> -->
+                <!-- <div class="detail-box">
                     <h5>
                         General and Announcements
                     </h5>
@@ -123,395 +231,500 @@
 
                             }
                         </script>
-                    </p>
+                    </p> 
 
-                </div>
+                </div>-->
             </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod2" onclick="javascript:func2()">
 
-                        Credit Cards and Loans
+            <div class="Payments" style="position: relative; left: -80pt;">
+                <!-- <div class="img-box"> -->
 
-                    </button>
-                </div>
-                <script type="text/javascript">
-
-
-                    function func2() {
-
-                        location.href = "module2.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Credit Cards and Loans
-
-                    </h5>
-                    <p>
-                        – Credit card application<br />
-
-                        – <button id="CCpaymentHistory" onclick="javascript:CCtranHis()"> Credit card(s) payment and history
-
-                        </button>
-                        <script type="text/javascript">
+                    <label id="mod2" style="font-weight: bold; font-size: 20pt;">
+                       Payments
+                    </label>
+                    <div class="box" style=" width:50pt; height: 50pt;" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="loanPayment"  style = "height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:payLoan()">
+                                Pay loan installment 
+                             </button> 
+                             <script type="text/javascript">
     
     
-                            function CCtranHis() {
-                                location.href = "CCPayHistory.html";
-
-                            }
-                        </script>
-
-                        – Credit card Theft Management<br />
-                        – Loan application<br />
-                        – Loan payment
-                        <button id="My points" onclick="javascript:Points()"> My Points
-
-                        </button>
-                        <script type="text/javascript">
+                                function payLoan() 
+                                {
+                                  
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="ccPayment"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:payCC()">
+                               Pay credit card bill
+                             </button> 
+                             <script type="text/javascript">
     
     
-                            function Points() {
-                                location.href = "Points.html";
+                                function payCC() {
+                                    location.href = "payCCbill.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
 
-                            }
-                        </script>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="internalTransfer"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:internal()">
+                                Make internal transfer
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function internal() {
+                                    location.href = "internalTransfer.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="domesticTransfer"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:domestic()">
+                                Make domestic transfer
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function domestic() {
+                                    location.href = "domesticTransfer.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="internationalTransfer"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:international()">
+                                Make international transfer
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function international() {
+                                    location.href = "internationalTransfer.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="utilityBill"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:utilityBill()">
+                                Pay utility bill
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function utilityBill() {
+                                    location.href = "payUtilityBill.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
 
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="makeDonation"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:donations()">
+                               Make Donations
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function donations() {
+                                    location.href = "makeDonation.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
 
-                    </p>
-                </div>
-
+                    <div class="box">
+                        <div class="img-box" style="background-color:green; width:150pt; height: 5pt">
+                           
+                        </div>
+                    </div>
             </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod3" onclick="javascript:func3()">
-                        Personal Financial Management
-                    </button>
 
-                </div>
-                <script type="text/javascript">
+            <div class="Loans & Credit Cards" style="position: relative; left: 450pt; top:-462pt">
+                <!-- <div class="img-box"> -->
 
+                    <label id="mod3" style="font-weight: bold; font-size: 20pt;">
+                       Loans & Credit Cards
+                    </label>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="applyForLoan"  style = "height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:applyCLoan()">
+                                Apply for a car loan
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function applyCLoan() {
+                                    location.href = "ApplyCLoan.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="applyForLoan"  style = "height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:applyPLoan()">
+                                Apply for a personal loan
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function applyPLoan() {
+                                    location.href = "ApplyPLoan.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="applyForCC"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:applyCC()">
+                               Apply for a Credit Card
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function applyCC() {
+                                    location.href = "ApplyCC.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
 
-                    function func3() {
-
-                        location.href = "module3.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Financial Management
-                    </h5>
-                    <p>
-                        – Account(s) details<br />
-                        – Account(s) history and activity<br />
-                        – Bank Transfers<br />
-                        – Cheque submission
-
-                    </p>
-                </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewCCTransactions"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:ccHistory()">
+                                View credit card history
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function ccHistory() {
+                                    location.href = "CCPayHistory.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box">
+                        <div class="img-box" style="background-color:green; width:150pt; height: 5pt">
+                           
+                        </div>
+                    </div>
+                   
+                   
             </div>
-            <div class="box">
-                <div class="img-box">
-                    <button id="mod4" onclick="javascript:func4()">
-                        Bill Payment and Donations
-                    </button>
-                </div>
-                <script type="text/javascript">
 
+            <div class="Points" style="position: relative; top: -150pt; left:200pt">
+                <!-- <div class="img-box"> -->
 
-                    function func4() {
+                    <label id="mod4" style="font-weight: bold; font-size: 20pt;">
+                       Points
+                    </label>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewPoints"  style = "height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewPoints()">
+                                view my points
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function viewPoints() {
+                                    location.href = "ViewPointsBalance.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="redeemPoints"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:redeemPoints()">
+                               Redeem points
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function redeemPoints() 
+                                {
+                                    location.href = "WhichMa7alPoints.html";
+    
+                                }
+                            </script>
+                        </div>
+                    </div>
 
-                        location.href = "module4.html";
-                    }
-                </script>
-                <div class="detail-box">
-                    <h5>
-                        Payments
-                    </h5>
-                    <p>
-                        – Pay bills through bank and 3rd party applications<br />
-                        – Donate to charities
-                    </p>
-                </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewStores"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewStores()">
+                                View stores "will rename it later"
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function viewStores()
+                                 {
+                                   
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box">
+                        <div class="img-box" style="background-color:green; width:150pt; height: 5pt">
+                           
+                        </div>
+                    </div>
+                   
             </div>
-        </div>
-        <div class="btn-box">
-            <a href="">
-                Read More
-            </a>
+
+            <div class="Report" style="position: relative; left: -100pt; top: -250pt" >
+                <!-- <div class="img-box"> -->
+
+                    <label id="mod5" style="font-weight: bold; font-size: 20pt;">
+                       Report
+                    </label>
+                    <div class="box" style=" width:60pt; height: 60pt" >
+                        <div class="img-box" style="width:180pt; height: 60pt">
+                             <button id="reportTechnicalIssues"  style = "height:50pt; width:170pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:reportTechnicalIssue()">
+                                Report technical issues with the system
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function reportTechnicalIssue() {
+                                    location.href = "TechnicalIssue.html";
+    
+                                }
+                            </script>
+                        </div>
+                        
+                    </div>
+                    <div class="box" style=" width:60pt; height: 60pt" >
+                        <div class="img-box" style="width:180pt; height: 60pt">
+                             <button id="reportCCTheft"  style = " height:50pt; width:170pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:reportCard()">
+                              Report credit card theft or loss
+                             </button>
+                             <script type="text/javascript">
+    
+    
+                                function reportCard() {
+                                    location.href = "ReportStolenCard.html";
+    
+                                }
+                            </script> 
+                        </div>
+                    </div>
+
+                    <div class="box" style=" width:60pt; height: 60pt" >
+                        <div class="img-box" style="width:180pt; height: 60pt">
+                             <button id="viewStores"  style = " height:50pt; width:170pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:reportCard()">
+                                report credit card damage
+                             </button> 
+                             <script type="text/javascript">
+    
+    
+                                function reportCard() {
+                                    location.href = "ReportStolenCard.html";
+    
+                                }
+                            </script> 
+                        </div>
+                        
+                    </div>
+                    <div class="box">
+                        <div class="img-box" style="background-color:green; width:180pt; height: 5pt">
+                           
+                        </div>
+                    </div>
+                   
+            </div>
         </div>
     </section>
     <!-- end how section -->
-    <!-- about section -->
-    <section id="about_section">
-        <section class="about_section layout_padding-bottom">
-            <div class="container">
-                <div class="heading_container">
-                    <h2>
-                        About Amigas Bank
-                    </h2>
-                </div>
-                <div class="box">
-                    <div class="img-box">
-                        <img src="images/about-img.png" alt="">
-                    </div>
+
+    <!-- app section -->
+
+    <section class="app_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
                     <div class="detail-box">
+                        <h2>
+                            Our Powerful app to connect it all
+                        </h2>
                         <p>
-                            Amigas Bank is established since 2009 in Cairo,Egypt. Since then, we were keen to
-                            leave an imprint in the digital banking sector and continuously improve our service.
-                            Amigas is the bank to trust. 
+                            Download our app to manage your finances easier than ever
+
                         </p>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-        <!-- end about section -->
-        <!-- app section -->
-    <section id="app_section">
-        <section class="app_section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="detail-box">
-                            <h2>
-                                Our Powerful app to connect it all
-                            </h2>
-                            <p>
-                                Download our app to manage your finances easier than ever
-                            </p>
-                            <div class="download_box">
-                                <h5>
-                                    Download Now
-                                </h5>
-                                <div class="btn-box">
-                                    <a href="">
-                                        <img src="images/app-store.png" alt="">
-                                    </a>
-                                    <a href="">
-                                        <img src="images/play-store.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="img-box">
-                            <img src="images/slider-img.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-        <!-- end app section -->
-        <!-- auto section -->
-        <section id="startAutomatic">
-        <section class="auto_section layout_padding">
-            <div class="container">
-                <div class="heading_container">
-                    <h2>
-                        Start Automatic Now
-                    </h2>
-                </div>
-                <div class="box">
-                    <div class="img-box">
-                        <img src="images/auto-img.png" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <p>
-                            Amigas is keen to be part of the digital era and our online banking system is our shield.
-                            Join our online community now and be part of this transformation.
-                        </p>
-                        <div class="btn-box">
-                            <a href="signup.html">
-                                Register Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-        <!-- end auto section -->
-        <!-- client section -->
-    
-        <section id="testimonials">
-        <section class="client_section layout_padding-bottom">
-            <div class="container">
-                <div class="heading_container">
-                    <h2>
-                        Testimonial
-                    </h2>
-                </div>
-                <div class="box">
-                    <div class="b-1">
-                        <div class="client_id">
-                            <div class="img-box">
-                                <img src="images/client-1.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <h5>
-                                    Hamada
-                                </h5>
-                                <h6>
-                                    1/2/2023
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="client_detail">
-                        <p>
-                            My recent decision to open an account at Amigas was the best 
-                            decision I have ever taken. I am so glad to be a partner to this establishment
-                        </p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="client_id">
-                        <div class="img-box">
-                            <img src="images/client-2.jpg" alt="">
-                        </div>
-                        <div class="name">
+                        <div class="download_box">
                             <h5>
-                                Hamoksha
+                                Download Now
                             </h5>
-                            <h6>
-                                2/4/2023
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="client_detail">
-                        <p>
-                            I've been a customer of Amigas bank for years, 
-                            and I'm always impressed by their personalized service. 
-                            I highly recommend this bank to anyone looking for a reliable and trustworthy financial partner.
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </section>
-    
-        <!-- end client section -->
-        <!-- info section -->
-        <section class="info_section layout_padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="info_contact">
-                            <div class="info_logo">
-                                <a href="index.html">
-                                    <span>
-                                        Amigas Bank
-                                    </span>
+                            <div class="btn-box">
+                                <a href="">
+                                    <img src="images/app-store.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/play-store.png" alt="">
                                 </a>
                             </div>
-                            <h5>
-                                Contact Us
-                            </h5>
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/location.png" width="18px" alt="" />
-                                </div>
-                                <p>
-                                    Cairo, Egypt
-                                </p>
-                            </div>
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/phone.png" width="18px" alt="" />
-                                </div>
-                                <p>
-                                    19991
-                                </p>
-                            </div>
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/envelope.png" width="18px" alt="" />
-                                </div>
-                                <p>
-                                    demo@gmail.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="info_info">
-                            <h5>
-                                Invest Money
-                            </h5>
-                            <p>
-                               A safe investment, is an investment at Amigas Bank
-                            </p>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-3">
-                        
-                    </div>
-                    <div class="col-md-3">
-                        <div class="info_form ">
-                            <h5>
-                                Newsletter
-                            </h5>
-                            <form action="">
-                                <input type="email" placeholder="Enter your email" />
-                                <button onClick = "subscribeLabel()">
-                                    Subscribe
-                                </button>
-                                
-                                <script>
-                                    function subscribeLabel() {
-                                        alert("Thanks for subscribing!");
-                                    }
-                                </script>
-                            </form>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/slider-img.png" alt="">
+                    </div>
+                </div>
             </div>
-        </section>
-    
-        <!-- end info_section -->
-        <!-- footer section -->
-        <section class="container-fluid footer_section">
-            <p>
-                &copy; 2019 All Rights Reserved By
-                <a href="https://html.design/">Free Html Templates</a>
-            </p>
-        </section>
-        <!-- footer section -->
-    
-        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-    
-        </script>
-        <!-- owl carousel script
-          -->
-        <script type="text/javascript">
-            $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 0,
-                navText: [],
-                center: true,
-                autoplay: true,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 3
-                    }
+        </div>
+    </section>
+
+    <!-- end app section -->
+
+
+    <!-- end client section -->
+   <!-- info section -->
+   <section class="info_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info_contact">
+                    <div class="info_logo">
+                        <a href="index.html">
+                            <span>
+                                Amigas Bank
+                            </span>
+                        </a>
+                    </div>
+                    <h5>
+                        Contact Us
+                    </h5>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/location.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            Cairo, Egypt
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/phone.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            19991
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/envelope.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            demo@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info_info">
+                    <h5>
+                        Invest Money
+                    </h5>
+                    <p>
+                       A safe investment, is an investment at Amigas Bank
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-3">
+                <div class="info_form ">
+                    <h5>
+                        Newsletter
+                    </h5>
+                    <form action="">
+                        <input type="email" placeholder="Enter your email" />
+                        <button onClick = "subscribeLabel()">
+                            Subscribe
+                        </button>
+                        
+                        <script>
+                            function subscribeLabel() {
+                                alert("Thanks for subscribing!");
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end info_section -->
+   <!-- footer section -->
+    <section class="container-fluid footer_section">
+        <p>
+            &copy; 2019 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+        </p>
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+
+    </script>
+    <!-- owl carousel script
+      -->
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
                 }
-            });
-        </script>
-        <!-- end owl carousel script -->
-    </body>
-    
-    </html>
+            }
+        });
+    </script>
+    <!-- end owl carousel script -->
+</body>
+
+</html>
