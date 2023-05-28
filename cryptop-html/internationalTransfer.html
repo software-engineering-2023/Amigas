@@ -104,9 +104,10 @@
             
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
-            <label for="psw"><b>Please note there is an exchange rate of 30.88 EGP.</b></label>
+            <label for="psw"><b>Please check exchange rates below.</b></label>
 
-          
+            <button id="exchange" onclick="javascript:exchange()" class="float-left submit-button">Exchange Rates</button>
+
 
             <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
             </form>
@@ -120,12 +121,41 @@
                 //   }
                 //   var str=x.toString();
 
-                function loginfunc() {
-                     alert("Amount transferred. " );
+                // function loginfunc() {
+                    //  alert("Amount transferred. " );
                     //  + document.getElementById("name").value + "is equal to" + ""+str 
 
-                  }
-                
+                //   }
+
+                function exchange(){
+                    location.href = "ExchangeRate.html"; 
+                }
+
+                function loginfunc(event) {
+			event.preventDefault();
+			const amount = document.getElementById("amount").value;
+			const from = document.getElementById("from").value;
+			const to = document.getElementById("to").value;
+			let result= 0;
+
+			if (from === to) {
+				result = amount;
+			} else if (from === "egp") {
+				result = amount / rates[to];
+			} else if (to ==="egp") {
+				result = amount * rates[from];
+			} else {
+				result = amount * rates[from] / rates[to];
+			}
+
+			if (from === to) {
+				document.getElementById("result").innerHTML = amount;
+			} else {
+				document.getElementById("result").innerHTML = result.toFixed(2);
+			}
+		}
+   
+		document.querySelector("form").addEventListener("submit", loginfunc);
 
                   
 

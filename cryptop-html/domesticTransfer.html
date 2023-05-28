@@ -105,7 +105,7 @@
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
 
-            <label for="psw"><b>Please note there is an additional amount of 20 EGP as adminstrative fees.</b></label>
+            <label for="psw"><b>Please note there is an additional amount of 30 EGP as adminstrative fees.</b></label>
           
 
             <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
@@ -114,10 +114,23 @@
                 //  var x= parseInt.document.getElementById("amount")+20;
                 //  var str=x.toString();
 
-                function loginfunc() {
-                 alert("Amount transferred. "  );
+                // function loginfunc() {
+                //  alert("Amount transferred. "  );
                 // + document.getElementById("name").value + "is equal to" + str
-                }
+                // }
+
+
+                function loginfunc(event) {
+			event.preventDefault();
+			const amount = document.getElementById("amount").value;
+			// const from = document.getElementById("from").value;
+			// const to = document.getElementById("to").value;
+			let result= 0;
+				result = amount + 30;
+		}
+
+		// Add event listener to form submission
+		document.querySelector("form").addEventListener("submit", loginfunc);
             </script>
            
         </div>
