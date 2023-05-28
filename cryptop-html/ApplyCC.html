@@ -49,18 +49,14 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav  ">
+                            <ul class="navbar-nav ">
                                 <li class="nav-item">
 
-                                    <a class="nav-link" href="ApplyCC.html"> Apply for Credit Card</a>
+                                    <a class="nav-link" > Apply for Credit Card</a>
 
                                 </li>
                             </ul>
-                            <div class="user_option">
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
-                            </div>
+                            
                         </div>
                     </div>
                 </nav>
@@ -82,7 +78,7 @@
             <input type="text" id="Name" placeholder="Name"  required>
 
             <label for="Mobile Number"><b>MobileNumber</b></label>
-            <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
+            <input  type="text" id="MobileNumber" placeholder="Mobile Number"  required> <br/>
 
             <label for="Email"><b>Email</b></label>
             <input  type="text" id="Email" placeholder="Email"  required> <br/>
@@ -96,16 +92,17 @@
             <option value="no">no</option>
             </select> <br/>
 
-            <label for="Customer Type"><b>CustomerType</b></label>
-            <select name="Customer Type" id="Customer Type">
+            <label for="CustomerType"><b>CustomerType</b></label>
+            <select name="Customer Type" id="CustomerType">
             <option value="Payroll with Amigas">PayrollBank</option>
             <option value="Payroll with another bank">Payrollanother</option>
             <option value="Non-payroll">Non-payroll</option>
             <option value="Self-employed">Self-employed</option>
+
             </select> <br/>
 
               <header>
-                <b>Net Monthly Income</b>
+                <b>NetMonthlyIncome</b>
             </header>
             <body>
                 <div class="value left">Min 3,000 EGP</div>
@@ -128,10 +125,10 @@
             <input  type="text" id="Area" placeholder="Area"  required>
 
             <label for="Cardtype"><b>Card Type</b></label>
-            <input  type="text" id="CatdType" placeholder="CardType"  required>
+            <input  type="text" id="CardType" placeholder="CardType"  required>
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="Job Title" placeholder="Job Title"  required>
+            <input  type="text" id="JobTitle" placeholder="Job Title"  required>
 
             <input type="checkbox" id="verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
@@ -147,7 +144,6 @@
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
-
                  
             <button type="button" onclick="checkFields()">Apply</button>
 	        </form>
@@ -159,22 +155,26 @@
 
 	<script>
 		function checkFields() {
-            
-            var name = document.getElementById("name").value;
+
+            var name = document.getElementById("Name").value;
 			var MobileNumber = document.getElementById("MobileNumber").value;
-			var Email = document.getElementById("email").value;
+			var Email = document.getElementById("Email").value;
             var NationalID = document.getElementById("NationalID").value;
-            var AmigasCutomer = document.getElementById("NationalID").value;
+            var Customer = document.getElementById("Customer").value;
             var CustomerType = document.getElementById("CustomerType").value;
-            var NetMonthlyIncome = document.getElementById("Net Monthly Income").value;
+            var NetMonthlyIncome = document.getElementById("scale").value;
             var City = document.getElementById("City").value;
             var Area = document.getElementById("Area").value;
             var CardType = document.getElementById("CardType").value;
-            var Jobtitle = document.getElementById("Jobtitle").value;
+            var Jobtitle = document.getElementById("JobTitle").value;
+            var Verification = document.getElementById("verification").value;
+            var AcceptReject = document.getElementById("accept/reject").value;
+           
             
 
 
-			if (dueDate && reminderTime && billName && reminderInterval) {
+			if (name && MobileNumber && Email && NationalID && Customer && CustomerType && NetMonthlyIncome 
+            && City && Area && CardType && Jobtitle && Verification && AcceptReject) {
 				showPopup();
 			} else {
 				alert("Please fill in all fields.");
