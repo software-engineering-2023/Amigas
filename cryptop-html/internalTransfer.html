@@ -110,10 +110,21 @@
                 //  var x= parseInt.document.getElementById("amount");
                 //  var str=x.toString();
 
-                function loginfunc() {
-                 alert("Amount transferred. " );
+                // function loginfunc() {
+                //  alert("Amount transferred. " );
                 //  + document.getElementById("name").value + "is equal to" + xstr
-                }
+                // }
+
+                function loginfunc(event) {
+			event.preventDefault();
+			const amount = document.getElementById("amount").value;
+			// const from = document.getElementById("from").value;
+			// const to = document.getElementById("to").value;
+			let result= 0;
+				result = amount;
+		}
+        document.querySelector("form").addEventListener("submit", loginfunc);
+
             </script>
            
         </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>International Transactions</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		form {
+			margin: 0 auto;
+			max-width: 500px;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+		}
+		label {
+			display: inline-block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #555;
+		}
+		select, input[type="number"], input[type="text"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size:16px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		.result-container {
+			margin-top: 20px;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.result-container label {
+			font-weight: bold;
+			color: #555;
+			margin-bottom: 10px;
+		}
+		.result-container span {
+			font-size: 24px;
+			font-weight: bold;
+			color: #4CAF50;
+		}
+	</style>
+</head>
+<body>
+	<h1>Exchange Currency</h1>
+	<form>
+		<label for="amount">Amount:</label>
+		<input type="number" id="amount" name="amount" required>
+		<label for="from">From:</label>
+		<select id="from" name="from">
+			<option value="egp">EGP</option>
+			<option value="usd">USD</option>
+			<option value="euro">Euro</option>
+			<option value="sterling">Sterling</option>
+		</select>
+		<label for="to">To:</label>
+		<select id="to" name="to">
+			<option value="egp">EGP</option>
+			<option value="usd">USD</option>
+			<option value="euro">Euro</option>
+			<option value="sterling">Sterling</option>
+		</select>
+		<input type="submit" value="Convert">
+	</form>
+
+	<div class="result-container">
+		<label for="result">Result:</label>
+		<span id="result"></span>
+	</div>
+
+	<script>
+		// Currency exchange rates
+		const rates = {
+			egp: 1,
+			usd: 30.88,
+			euro: 33.14,
+			sterling: 38.13
+		};
+
+		// Function to handle form submission
+		function convertCurrency(event) {
+			event.preventDefault();
+			const amount = document.getElementById("amount").value;
+			const from = document.getElementById("from").value;
+			const to = document.getElementById("to").value;
+			let result= 0;
+
+			if (from === to) {
+				result = amount;
+			} else if (from === "egp") {
+				result = amount / rates[to];
+			} else if (to ==="egp") {
+				result = amount * rates[from];
+			} else {
+				result = amount * rates[from] / rates[to];
+			}
+
+			if (from === to) {
+				document.getElementById("result").innerHTML = amount;
+			} else {
+				document.getElementById("result").innerHTML = result.toFixed(2);
+			}
+		}
+
+		// Add event listener to form submission
+		document.querySelector("form").addEventListener("submit", convertCurrency);
+	</script>
+</body>
+</html>
