@@ -102,7 +102,7 @@
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
 
-            <div id="amountDisplay"></div>
+            <div id="amountDisplay"><b> Amount Transferred: </b></div>
 
             <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
             </form>
@@ -115,16 +115,16 @@
                 //  + document.getElementById("name").value + "is equal to" + xstr
                 // }
 
-                function loginfunc(event) {
-    event.preventDefault();
-    const amount = document.getElementById("amount").value;
-    const name = document.getElementById("name").value;
-    const currency = document.getElementById("currency").value;
-    const accountnum = document.getElementById("accountnum").value;
-    const amountDisplay = document.getElementById("amount-display");
-    amountDisplay.innerText = `Amount transferred: {amount} {currency} to {name}'s account ({accountnum}).`;
+                function loginfunc() {
+  const username = document.getElementById("Username").value;
+  const password = document.getElementById("Password").value;
+  const amount = document.getElementById("amount").value;
+  const currency = document.getElementById("currency").value;
+  const name = document.getElementById("name").value;
+  const accountnum = document.getElementById("accountnum").value;
+  const amountDisplay = document.getElementById("amountDisplay");
+  amountDisplay.innerText = "Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).";
 }
-
             </script>
            
         </div>
