@@ -151,13 +151,13 @@
 			let result= 0;
 
 			if (from === to) {
-				result = amount;
+				amountDisplay = amount;
 			} else if (from === "egp") {
-				result = amount / rates[to];
+				amountDisplay = amount / rates[to];
 			} else if (to ==="egp") {
-				result = amount * rates[from];
+				amountDisplay = amount * rates[from];
 			} else {
-				result = amount * rates[from] / rates[to];
+				amountDisplay = amount * rates[from] / rates[to];
 			}
 
 			if (from === to) {
@@ -165,7 +165,7 @@
 			} else {
 				document.getElementById("result").innerHTML = result.toFixed(2);
 			}
-  amountDisplay.innerText = `Amount transferred: ${resuult} ${to} to ${name}'s account (${accountnum}).`;
+  amountDisplay.innerText = `Amount transferred: ${amountDisplay} ${to} to ${name}'s account (${accountnum}).`;
 
 		}
 
