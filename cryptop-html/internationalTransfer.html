@@ -110,7 +110,7 @@
 
             <div id="amountDisplay"><b> Amount Transferred: </b></div>
 
-            <button id="myButton" onclick="javascript:convertCurrency()" class="float-left submit-button">Transfer</button>
+            <button id="myButton" onclick="javascript:login()" class="float-left submit-button">Transfer</button>
             </form>
             <script type="text/javascript">
 
@@ -121,10 +121,7 @@ function exchange(){
                 }
 
 
-<div class="result-container">
-		<label for="result">Amount Transferred:</label>
-		<span id="result"></span>
-	</div>
+
 
 		// Currency exchange rates
 		const rates = {
@@ -135,32 +132,30 @@ function exchange(){
 		};
 
 		// Function to handle form submission
-		function convertCurrency(event) {
-			event.preventDefault();
-			const amount = document.getElementById("amount").value;
-			const from = document.getElementById("from").value;
-			const to = document.getElementById("to").value;
-			let result= 0;
+        function loginfunc() {
+  const username = document.getElementById("Username").value;
+  const password = document.getElementById("Password").value;
+  const amount = document.getElementById("amount").value;
+  const currencycurr = document.getElementById("currencycurr").value;
+  const currency = document.getElementById("currency").value;
+  const name = document.getElementById("name").value;
+  const accountnum = document.getElementById("accountnum").value;
+  const amountDisplay = document.getElementById("amountDisplay");
+            if(currencycurr==currency){
+                Number(amount)=amount;
+            }
+            else if(currencycurr=="EGP"){
+              amount = Number(amount)/rates[currency];
+            }
 
-			if (from === to) {
-				result = amount;
-			} else if (from === "egp") {
-				result = amount / rates[to];
-			} else if (to ==="egp") {
-				result = amount * rates[from];
-			} else {
-				result = amount * rates[from] / rates[to];
-			}
+            else if(currency=="EGP"){
+                amount=Number(amount)*rates[currencycurr];
+            }
 
-			if (from === to) {
-				document.getElementById("result").innerHTML = amount;
-			} else {
-				document.getElementById("result").innerHTML = result.toFixed(2);
-			}
-		}
 
-		// Add event listener to form submission
-		document.querySelector("form").addEventListener("submit", convertCurrency); 
+  amountDisplay.innerText = `Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).`;
+}
+
          //  var x= parseInt.getElementById("amount");
                 //  if(document.getElementById(currencycurr)=="EGP"){
                 //      x= parseInt.document.getElementById("amount")/30.88;
