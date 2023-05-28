@@ -75,34 +75,40 @@
 
         <div class="container">
             <label for="name"><b>Name</b></label>
-            <input type="text" id="Name" placeholder="Name"  required>
+            <input type="text" id="Name" placeholder="Name"  required><br/>
+            <br/>
 
-            <label for="Mobile Number"><b>MobileNumber</b></label>
+            <label for="Mobile Number"><b>Mobile Number</b></label>
             <input  type="text" id="MobileNumber" placeholder="Mobile Number"  required> <br/>
+            <br/>
 
-            <label for="Email"><b>Email</b></label>
+            <label for="Email"><b>E-mail</b></label>
             <input  type="text" id="Email" placeholder="Email"  required> <br/>
+            <br/>
 
-            <label for="NationalID"><b>NationalID</b></label>
+            <label for="NationalID"><b>National ID</b></label>
             <input  type="text" id="NationalID" placeholder="NationalID"  required> <br/>
+            <br/>
 
-            <label for="Customer"><b>Amigas Customer?</b></label>
+            <label for="Customer"><b>Amigas Customer?</b></label><br/>
             <select name="Customer?" id="Customer">
             <option value="yes">yes</option>
             <option value="no">no</option>
             </select> <br/>
+            <br/>
 
-            <label for="CustomerType"><b>CustomerType</b></label>
+
+            <label for="CustomerType"><b>Customer Type</b></label><br/>
             <select name="Customer Type" id="CustomerType">
-            <option value="Payroll with Amigas">PayrollBank</option>
-            <option value="Payroll with another bank">Payrollanother</option>
+            <option value="Payroll with Amigas">Payroll Bank</option>
+            <option value="Payroll with another bank">Payroll Another Bank</option>
             <option value="Non-payroll">Non-payroll</option>
             <option value="Self-employed">Self-employed</option>
-
             </select> <br/>
+            <br/>
 
-              <header>
-                <b>NetMonthlyIncome</b>
+            <header>
+                <b>Net Monthly Income</b>
             </header>
             <body>
                 <div class="value left">Min 3,000 EGP</div>
@@ -116,19 +122,24 @@
                         document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
                     }
                 </script>
-            </body>
+            </body><br/>
+            
 
             <label for="City"><b>City</b></label>
-            <input  type="text" id="City" placeholder="City"  required>
+            <input  type="text" id="City" placeholder="City"  required><br/>
+            <br/>
 
             <label for="Area"><b>Area</b></label>
-            <input  type="text" id="Area" placeholder="Area"  required>
+            <input  type="text" id="Area" placeholder="Area"  required><br/>
+            <br/>
 
             <label for="Cardtype"><b>Card Type</b></label>
-            <input  type="text" id="CardType" placeholder="CardType"  required>
+            <input  type="text" id="CardType" placeholder="CardType"  required><br/>
+            <br/>
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="JobTitle" placeholder="Job Title"  required>
+            <input  type="text" id="JobTitle" placeholder="Job Title"  required><br/>
+            <br/>
 
             <input type="checkbox" id="verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
@@ -136,14 +147,16 @@
                 data and information. This includes checking the borrower’s I-Score, 
                 which may be required for the request to be approved. 
                 The Bank also maintains the right to make inquiries about 
-                the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
+                the customer at other banks, the Central Bank of Egypt, or similar entities</label><br/>
+                <br/>
             
 
             <input type="checkbox" id="accept/reject" name="accept/reject" value="accept/reject">
             <label for="accept/reject">The Bank retains the right to approve or reject the 
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
-                original documents (including the application form), in line with Bank policy</label><br>
+                original documents (including the application form), in line with Bank policy</label><br/>
+                <br/>
                  
             <button type="button" onclick="checkFields()">Apply</button>
 	        </form>

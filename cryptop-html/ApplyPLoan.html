@@ -75,36 +75,44 @@
 
         <div class="container">
             <label for="name"><b>Name</b></label>
-            <input type="text" id="name" placeholder="Name"  required>
+            <input type="text" id="name" placeholder="Name"  required><br/>
+            <br/>
 
-            <label for="mbl"><b>MobileNumber</b></label>
+            <label for="mbl"><b>Mobile Number</b></label>
             <input  type="text" id="mobilenumber" placeholder="Mobile Number"  required> <br/>
+            <br/>
 
             <label for="mail"><b>E-mail</b></label>
             <input  type="text" id="email" placeholder="E-mail"  required> <br/>
+            <br/>
 
             <label for="NID"><b>National ID</b></label>
             <input  type="text" id="nationalID" placeholder="National ID"  required> <br/>
+            <br/>
 
-            <label for="cust"><b>Amigas Customer?</b></label>
+            <label for="cust"><b>Amigas Customer?</b></label><br/>
             <select name="Customer?" id="customer">
             <option value="yes">yes</option>
             <option value="no">no</option>
             </select> <br/>
-
-            <label for="Ctype"><b>Customer Type</b></label>
+            <br/>
+            
+            <label for="Ctype"><b>Customer Type</b></label><br/>
             <select name="Customer Type" id="customerType">
             <option value="Payroll with Amigas">PayrollBank</option>
             <option value="Payroll with another bank">Payrollanother</option>
             <option value="Non-payroll">Non-payroll</option>
             <option value="Self-employed">Self-employed</option>
             </select> <br/>
+            <br/>
 
             <label for="City"><b>City</b></label>
-            <input  type="text" id="city" placeholder="City"  required>
+            <input  type="text" id="city" placeholder="City"  required><br/>
+            <br/>
 
             <label for="Area"><b>Area</b></label>
-            <input  type="text" id="area" placeholder="Area"  required>
+            <input  type="text" id="area" placeholder="Area"  required><br/>
+            <br/>
 
             <body>
                 <label for="scale1"><b>Net Monthly Income</b></label><br/>
@@ -133,9 +141,11 @@
                     });
                 </script>
             </body>
+            <br/>
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="jobTitle" placeholder="Job Title"  required>
+            <input  type="text" id="jobTitle" placeholder="Job Title"  required><br/>
+            <br/>
 
             <input type="checkbox" id="Verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
@@ -144,6 +154,7 @@
                 which may be required for the request to be approved. 
                 The Bank also maintains the right to make inquiries about 
                 the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
+                <br/>
             
 
             <input type="checkbox" id="Accept/reject" name="accept/reject" value="accept/reject">
@@ -151,6 +162,7 @@
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
+                <br/>
 
 
                <button type="button" onclick="checkFields()">Apply</button>
