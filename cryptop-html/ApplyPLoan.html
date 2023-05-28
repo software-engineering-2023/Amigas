@@ -52,15 +52,11 @@
                             <ul class="navbar-nav  ">
                                 <li class="nav-item">
 
-                                    <a class="nav-link" href="ApplyPLoan.html"> Apply for Personal Loan</a>
+                                    <a class="nav-link"> Apply for Personal Loan</a>
 
                                 </li>
                             </ul>
-                            <div class="user_option">
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
-                            </div>
+                            
                         </div>
                     </div>
                 </nav>
@@ -79,25 +75,25 @@
 
         <div class="container">
             <label for="name"><b>Name</b></label>
-            <input type="text" id="Name" placeholder="Name"  required>
+            <input type="text" id="name" placeholder="Name"  required>
 
             <label for="mbl"><b>MobileNumber</b></label>
-            <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
+            <input  type="text" id="mobilenumber" placeholder="Mobile Number"  required> <br/>
 
             <label for="mail"><b>E-mail</b></label>
-            <input  type="text" id="E-mail" placeholder="E-mail"  required> <br/>
+            <input  type="text" id="email" placeholder="E-mail"  required> <br/>
 
             <label for="NID"><b>National ID</b></label>
-            <input  type="text" id="National ID" placeholder="National ID"  required> <br/>
+            <input  type="text" id="nationalID" placeholder="National ID"  required> <br/>
 
             <label for="cust"><b>Amigas Customer?</b></label>
-            <select name="Customer?" id="Customer">
+            <select name="Customer?" id="customer">
             <option value="yes">yes</option>
             <option value="no">no</option>
             </select> <br/>
 
             <label for="Ctype"><b>Customer Type</b></label>
-            <select name="Customer Type" id="Customer Type">
+            <select name="Customer Type" id="customerType">
             <option value="Payroll with Amigas">PayrollBank</option>
             <option value="Payroll with another bank">Payrollanother</option>
             <option value="Non-payroll">Non-payroll</option>
@@ -105,55 +101,43 @@
             </select> <br/>
 
             <label for="City"><b>City</b></label>
-            <input  type="text" id="City" placeholder="City"  required>
+            <input  type="text" id="city" placeholder="City"  required>
 
             <label for="Area"><b>Area</b></label>
-            <input  type="text" id="Area" placeholder="Area"  required>
+            <input  type="text" id="area" placeholder="Area"  required>
 
-            <header>
-                <b>Net Monthly Income</b>
-            </header>
             <body>
+                <label for="scale1"><b>Net Monthly Income</b></label><br/>
                 <div class="value left">Min 3,000 EGP</div>
-                <input type="range" id="scale" name="scale" min="3000" max="100000" value="3000" oninput="updateValue()">
+                <input type="range" id="scale1" name="scale1" min="3000" max="100000" step="1">
                 <div class="value right">Max 100,000 EGP</div>
-                <p id="scaleValue">3,000 EGP</p>
+                <p><b>Income:</b> <span id="income">3000</span> EGP</p>
             
-                <script>
-                    function updateValue() {
-                        var value = document.getElementById("scale").value;
-                        document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
-                    }
-                </script>
-            </body>
-
-
-            <header>
-                <b>Requested Loan Amount</b>
-            </header>
-            <body>
-                <div class="value left">Min 1000 EGP</div>
-                <input type="range" id="scale" name="scale" min="1000" max="2500000" value="1000" oninput="updateValue()">
+                <label for="scale2"><b>Requested Loan Amount</b></label><br/>
+                <div class="value left">Min 100 EGP</div>
+                <input type="range" id="scale2" name="scale2" min="100" max="2500000" step="1">
                 <div class="value right">Max 2,500,000 EGP</div>
-                <p id="scaleValue">1000 EGP</p>
+                <p><b>Loan:</b> <span id="loan">100</span>EGP</p>
             
                 <script>
-                    function updateValue() {
-                        var value = document.getElementById("scale").value;
-                        document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
-                    }
+                    var scale1 = document.getElementById("scale1");
+                    var income = document.getElementById("income");
+                    scale1.addEventListener("input", function() {
+                        income.innerHTML = scale1.value;
+                    });
+            
+                    var scale2 = document.getElementById("scale2");
+                    var loan = document.getElementById("loan");
+                    scale2.addEventListener("input", function() {
+                        loan.innerHTML = scale2.value;
+                    });
                 </script>
             </body>
-
-            
-
-            
-            
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="Job Title" placeholder="Job Title"  required>
+            <input  type="text" id="jobTitle" placeholder="Job Title"  required>
 
-            <input type="checkbox" id="verification" name="verification" value="verification">
+            <input type="checkbox" id="Verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
                 the Bank the authority to disclose all/part of his/her 
                 data and information. This includes checking the borrower’s I-Score, 
@@ -162,18 +146,57 @@
                 the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
             
 
-            <input type="checkbox" id="accept/reject" name="accept/reject" value="accept/reject">
+            <input type="checkbox" id="Accept/reject" name="accept/reject" value="accept/reject">
             <label for="accept/reject">The Bank retains the right to approve or reject the 
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
 
-                
+
+               <button type="button" onclick="checkFields()">Apply</button>
+	        </form>
+
+	<div id="popup" style="display:none;">
+		<p>Request Sent!</p>
+		<button onclick="hidePopup()">OK</button>
+	</div>
+
+	<script>
+		function checkFields() {
+
+            var name = document.getElementById("name").value;
+			var MobileNumber = document.getElementById("mobilenumber").value;
+			var Email = document.getElementById("email").value;
+            var NationalID = document.getElementById("nationalID").value;
+            var Customer = document.getElementById("customer").value;
+            var CustomerType = document.getElementById("customerType").value;
+            var City = document.getElementById("city").value;
+            var Area = document.getElementById("area").value;
+            var NetMonthlyIncome = document.getElementById("scale1").value;
+            var LoanAmount = document.getElementById("scale2").value;
+            var Jobtitle = document.getElementById("jobTitle").value;
+            var Verification = document.getElementById("Verification").value;
+            var AcceptReject = document.getElementById("Accept/reject").value;
+           
+            
 
 
+			if (name && MobileNumber && Email && NationalID && Customer && CustomerType && City && Area && NetMonthlyIncome 
+            && LoanAmount && Jobtitle && Verification && AcceptReject) {
+				showPopup();
+			} else {
+				alert("Please fill in all fields.");
+			}
+		}
 
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Apply</button>
-            </form>
+		function showPopup() {
+			document.getElementById('popup').style.display = 'block';
+		}
+
+		function hidePopup() {
+			document.getElementById('popup').style.display = 'none';
+		}
+	</script>
      
     </section>
     <!-- end how section -->
