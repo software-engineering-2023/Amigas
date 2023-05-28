@@ -124,8 +124,7 @@
                 function loginfunc() {
   const username = document.getElementById("Username").value;
   const password = document.getElementById("Password").value;
-  const amount = document.getElementById("amount").value;
-  amount= amount+30;
+  const amount = Number(document.getElementById("amount").value) + Number(30);
   const currency = document.getElementById("currency").value;
   const name = document.getElementById("name").value;
   const accountnum = document.getElementById("accountnum").value;
