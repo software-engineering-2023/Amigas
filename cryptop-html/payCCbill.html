@@ -68,7 +68,7 @@
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
-            <title>Credit Card Bill Payment</title>
+            <title><b>Credit Card Bill Payment</b></title>
         </div>
 
 	<script>
@@ -94,12 +94,15 @@
 	</script>
 </head>
 <body>
-	<h1>Credit Card Bill Payment</h1>
-	<p>Enter the bill amount and payment amount to pay your credit card bill:</p>
-	<label for="bill-amount">Bill Amount:</label>
-	<input type="number" id="bill-amount" step="0.01"><br><br>
-	<label for="payment-amount">Payment Amount:</label>
-	<input type="number" id="payment-amount" step="0.01"><br><br>
+	<h2>
+        Credit Card Bill Payment
+    </h2> 
+    <br/>
+	<p><b>Enter the bill amount and payment amount to pay your credit card bill:</b></p>
+	<label for="bill-amount"><b>Bill Amount:</b> </label>
+	<input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br><br>
+	<label for="payment-amount"><b>Payment Amount:</b></label>
+	<input type="number" id="payment-amount" step="0.01" placeholder="payment amount" required><br><br>
 	<button onclick="payBill()">Pay Bill</button>
 </body>
     <!-- end how section -->

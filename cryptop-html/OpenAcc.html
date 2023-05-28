@@ -72,31 +72,38 @@
         </div>
 
         <div class="container">
-            <label for="name"><b>FullName</b></label>
-            <input type="text" id="Full Name" placeholder="FullName"  required>
+            <label for="name"><b>Full Name</b></label>
+            <input type="text" id="Full Name" placeholder="FullName"  required><br/>
+            <br/>
 
-            <label for="mbl"><b>MobileNumber</b></label>
+            <label for="mbl"><b>Mobile Number</b></label>
             <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
+            <br/>
 
             <label for="mail"><b>E-mail</b></label>
             <input  type="text" id="Email" placeholder="E-mail"  required> <br/>
+            <br/>
 
             <label for="NID"><b>National ID</b></label>
             <input  type="text" id="National ID" placeholder="National ID"  required> <br/>
+            <br/>
 
-            <b>Upload Passport</b>
+            <b>Upload Passport</b><br/><br/>
             <form action="/action_page.php">
                 <input type="file" id="myFile" name="filename">
-            </form>
+            </form><br/>
+            <br/>
 
-            <label for="Acctype"><b>Account Type</b></label>
+            <label for="Acctype"><b>Account Type</b></label><br/>
             <select name="Account Type" id="Type">
             <option value="Savings Account">Savings Account</option>
             <option value="Checking Account">Checking Account</option>
             </select> <br/>
+            <br/>
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="Job Title" placeholder="Job Title"  required>
+            <input  type="text" id="Job Title" placeholder="Job Title"  required><br/>
+            <br/>
 
             <input type="checkbox" id="verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
@@ -105,6 +112,7 @@
                 which may be required for the request to be approved. 
                 The Bank also maintains the right to make inquiries about 
                 the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
+                <br/>
             
 
             <input type="checkbox" id="accept/reject" name="accept/reject" value="accept/reject">
@@ -112,6 +120,7 @@
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
+                <br/>
 
                 <button type="button" onclick="checkFields()">Submit</button>
 	        </form>

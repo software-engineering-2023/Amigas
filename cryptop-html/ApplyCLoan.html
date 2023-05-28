@@ -77,56 +77,64 @@
 
            
             <label for="name"><b>Name</b></label>
-            <input type="text" id="Name" placeholder="Name"  required>
+            <input type="text" id="Name" placeholder="Name"  required><br/>
+            <br/>
 
-            <label for="mbl"><b>MobileNumber</b></label>
+            <label for="mbl"><b>Mobile Number</b></label>
             <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
+            <br/>
 
             <label for="mail"><b>E-mail</b></label>
             <input  type="text" id="E-mail" placeholder="E-mail"  required> <br/>
+            <br/>
 
             <label for="NID"><b>National ID</b></label>
             <input  type="text" id="National ID" placeholder="National ID"  required> <br/>
+            <br/>
 
-            <b>Upload Driver's License</b>
+            <b>Upload Driver's License</b><br/><br/>
 
             <form action="/action_page.php">
                 <input type="file" id="myFile" name="filename">
-                <input type="submit">
-            </form>
+            </form><br/>
+            <br/>
 
-            <b>Upload Utility Bill</b>
+            <b>Upload Utility Bill</b><br/><br/>
             <form action="/action_page.php">
                 <input type="file" id="myFile" name="filename">
-                <input type="submit">
-            </form>
+            </form><br/>
+            <br/>
 
-            <b>Upload Proof of Income</b>
+            <b>Upload Proof of Income</b><br/><br/>
             <form action="/action_page.php">
                 <input type="file" id="myFile" name="filename">
-                <input type="submit">
-            </form>
+            </form><br/>
+            <br/>
 
 
-            <label for="cust"><b>Amigas Customer?</b></label>
+            <label for="cust"><b>Amigas Customer?</b></label><br/>
             <select name="Customer?" id="Customer">
             <option value="yes">yes</option>
             <option value="no">no</option>
             </select> <br/>
+            <br/>
 
-            <label for="Ctype"><b>Customer Type</b></label>
+            <label for="Ctype"><b>Customer Type</b></label><br/>
             <select name="Customer Type" id="Customer Type">
             <option value="Payroll with Amigas">PayrollBank</option>
             <option value="Payroll with another bank">Payrollanother</option>
             <option value="Non-payroll">Non-payroll</option>
             <option value="Self-employed">Self-employed</option>
             </select> <br/>
+            <br/>
 
             <label for="City"><b>City</b></label>
-            <input  type="text" id="City" placeholder="City"  required>
+            <input  type="text" id="City" placeholder="City"  required><br/>
+            <br/>
 
             <label for="Area"><b>Area</b></label>
-            <input  type="text" id="Area" placeholder="Area"  required>
+            <input  type="text" id="Area" placeholder="Area"  required><br/>
+            <br/>
 
            
 
@@ -135,7 +143,8 @@
                 <div class="value left">Min 3,000 EGP</div>
                 <input type="range" id="scale1" name="scale1" min="3000" max="100000" step="1">
                 <div class="value right">Max 100,000 EGP</div>
-                <p><b>Income:</b> <span id="income">3000</span> EGP</p>
+                <p><b>Income:</b> <span id="income">3000</span> EGP</p><br/>
+                <br/>
             
                 <label for="scale2"><b>Requested Loan Amount</b></label><br/>
                 <div class="value left">Min 100 EGP</div>
@@ -156,10 +165,12 @@
                         loan.innerHTML = scale2.value;
                     });
                 </script>
-            </body>
+            </body><br/>
+            <br/>
 
             <label for="Jobtitle"><b>Job Title</b></label>
-            <input  type="text" id="Job Title" placeholder="Job Title"  required>
+            <input  type="text" id="Job Title" placeholder="Job Title"  required><br/>
+            <br/>
 
             <input type="checkbox" id="verification" name="verification" value="verification">
             <label for="verification"> By checking this box, the customer gives 
@@ -168,6 +179,7 @@
                 which may be required for the request to be approved. 
                 The Bank also maintains the right to make inquiries about 
                 the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
+                <br/>
             
 
             <input type="checkbox" id="accept/reject" name="accept/reject" value="accept/reject">
@@ -175,6 +187,7 @@
                 request at its discretion and based on the fulfillment of the customer 
                 verification procedure and the completion and submission of the required 
                 original documents (including the application form), in line with Bank policy</label><br>
+                <br/>
 
                 <button type="button" onclick="checkFields()">Apply</button>
 	        </form>
