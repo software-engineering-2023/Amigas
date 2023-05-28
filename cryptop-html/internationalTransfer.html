@@ -141,19 +141,20 @@ function exchange(){
   const name = document.getElementById("name").value;
   const accountnum = document.getElementById("accountnum").value;
   const amountDisplay = document.getElementById("amountDisplay");
+  let res=0
             if(currencycurr==currency){
-                Number(amount)=amount;
+               res=amount;
             }
             else if(currencycurr=="EGP"){
-              amount = Number(amount)/rates[currency];
+              res = Number(amount)/rates[currency];
             }
 
             else if(currency=="EGP"){
-                amount=Number(amount)*rates[currencycurr];
+                res=Number(amount)*rates[currencycurr];
             }
 
 
-  amountDisplay.innerText = `Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).`;
+  amountDisplay.innerText = `Amount transferred: ${res} ${currency} to ${name}'s account (${accountnum}).`;
 }
 
          //  var x= parseInt.getElementById("amount");
