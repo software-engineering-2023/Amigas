@@ -68,38 +68,42 @@
          </div>
      </header>
  </div>
-
-
  <section class="how_section layout_padding">
     <div class="heading_container">
         <h2>
-            Fill the form to send a notification
+            My Set Reminders
         </h2>
     </div>
+    <div class="how_container">
+        <div class="box" style="width: 700pt; height: 200pt;">
+            
+            <table style="border:1px solid black ; width: 800pt; height: 200pt; position: relative; left: -40pt;">
+                <tr style="border: 1px solid black ;">
+                  <th style="border:1px solid black; width: 300pt;">Reminder</th>
+                  <th style="border:1px solid black; width: 250pt;">date to recieve the reminder</th>
+                  <th style="border:1px solid black; width: 250pt;">date created</th>
+                </tr>
+                <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 300pt;">Gas bill</th>
+                    <th style="border:1px solid black; width: 250pt;">1st of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">01/05/2020</th>
+                  </tr>
 
-    <form>
-        <label for="retailer">Select a client: </label>
-        <select id="retailer" name="retailerName">
-          <option value="Zeina Oraby">Zeina</option>
-          <option value="Hana Mohamed">Hana</option>
-          <option value="Youssef Mostafa">Youssef</option>
-          <option value="Nelly Sahmoud">Nelly</option>
-        </select>
-      <br><br /><br />
-        <label for="points">Enter the content of the notification:</label> 
-        <input type="text" id="notification" placeholder="notification content"  required><br />
-      
-       <br>
-        <button id = "submit" type="submit" style= "color: black;  width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "notify()">
-            Send
-        </button>
-        
-        <script>
-            function notify() {
-                alert("Notification sent Successfully!");
-            }
-        </script>
-  
-          <!-- <div style="background-color: white; font-size: 24px; margin-bottom: 50px;"> -->
-    </form>
- </section>
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">credit card payment </th>
+                    <th style="border:1px solid black; width: 300pt;">12th of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">16/01/2021</th>
+                  </tr>
+
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">electricity bill </th>
+                    <th style="border:1px solid black; width: 300pt;">25th of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">13/04/2022</th>
+                  </tr>
+              </table>
+
+
+        </div>
+    </div>
+</section>
+</body>

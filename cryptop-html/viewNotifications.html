@@ -68,38 +68,42 @@
          </div>
      </header>
  </div>
-
-
  <section class="how_section layout_padding">
     <div class="heading_container">
         <h2>
-            Fill the form to send a notification
+            Recieved Notifications
         </h2>
     </div>
+    <div class="how_container">
+        <div class="box" style="width: 700pt; height: 200pt;">
+            
+            <table style="border:1px solid black ; width: 800pt; height: 200pt; position: relative; left: -40pt;">
+                <tr style="border: 1px solid black ;">
+                  <th style="border:1px solid black; width: 500pt;">Notification</th>
+                  <th style="border:1px solid black; width: 300pt;">date recieved</th>
+                </tr>
+                <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">We want to inform you that your credit card request was accepted</th>
+                    <th style="border:1px solid black; width: 300pt;">01/05/2020</th>
+                  </tr>
 
-    <form>
-        <label for="retailer">Select a client: </label>
-        <select id="retailer" name="retailerName">
-          <option value="Zeina Oraby">Zeina</option>
-          <option value="Hana Mohamed">Hana</option>
-          <option value="Youssef Mostafa">Youssef</option>
-          <option value="Nelly Sahmoud">Nelly</option>
-        </select>
-      <br><br /><br />
-        <label for="points">Enter the content of the notification:</label> 
-        <input type="text" id="notification" placeholder="notification content"  required><br />
-      
-       <br>
-        <button id = "submit" type="submit" style= "color: black;  width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "notify()">
-            Send
-        </button>
-        
-        <script>
-            function notify() {
-                alert("Notification sent Successfully!");
-            }
-        </script>
-  
-          <!-- <div style="background-color: white; font-size: 24px; margin-bottom: 50px;"> -->
-    </form>
- </section>
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">We want to inform you that your loan request was rejected</th>
+                    <th style="border:1px solid black; width: 300pt;">11/09/2023</th>
+                  </tr>
+
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">Please make sure to settle your credit card due payments before 01/07/2023 </th>
+                    <th style="border:1px solid black; width: 300pt;">13/06/2023</th>
+                  </tr>
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">Thank you for paying your water bill </th>
+                    <th style="border:1px solid black; width: 300pt;">22/09/2023</th>
+                  </tr>
+              </table>
+
+
+        </div>
+    </div>
+</section>
+</body>

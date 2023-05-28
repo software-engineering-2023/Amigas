@@ -130,7 +130,7 @@
                              <script type="text/javascript">
                                 function viewAcc() 
                                 {
-                                    location.href = "OpenAcc.html";
+                                    location.href = "viewAccDetails.html";
     
                                 }
                             </script>
@@ -162,7 +162,7 @@
                              <script type="text/javascript">
                                 function viewNotifications() 
                                 {
-                                    location.href = "OpenAcc.html";
+                                    location.href = "viewNotifications.html";
     
                                 }
                             </script>
@@ -170,12 +170,26 @@
                     </div>
                     <div class="box" style=" width:50pt; height: 50pt" >
                         <div class="img-box" style="width:150pt; height: 50pt">
-                             <button id="viewReminders"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewReminders()">
-                                View Reminders
+                             <button id="viewReminders"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewRecReminders()">
+                                View Received Reminders
                              </button> 
                              <script type="text/javascript">
-                                function viewReminders() 
+                                function viewRecReminders() 
                                 {
+                                    location.href = "viewRecievedReminders.html";
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box" style=" width:50pt; height: 50pt" >
+                        <div class="img-box" style="width:150pt; height: 50pt">
+                             <button id="viewReminders"  style = " height:40pt; width:150pt ;background-color:rgb(240,240,240); color: black; font-size:medium; font-weight: bold;" onclick="javascript:viewSetReminders()">
+                                View my set reminders
+                             </button> 
+                             <script type="text/javascript">
+                                function viewSetReminders() 
+                                {
+                                    location.href = "viewSetReminders.html";
                                    
     
                                 }
