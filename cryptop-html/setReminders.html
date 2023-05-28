@@ -52,15 +52,11 @@
                             <ul class="navbar-nav  ">
                                 <li class="nav-item">
 
-                                    <a class="nav-link" href="setReminders.html"> Set Reminder</a>
+                                    <a class="nav-link" > Set Reminder</a>
 
                                 </li>
                             </ul>
-                            <div class="user_option">
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
-                            </div>
+                            
                         </div>
                     </div>
                 </nav>
@@ -79,22 +75,31 @@
 
         <div class="container">
                
-                    
             <label for="billName"><b>Bill Name:</b></label>
-            <input type="text" id="billName" name="billName"><br>
+            <select name="billName" id="billName" >
+            <option value="Gas">Gas Bill</option>
+            <option value="Electricity">Electricity Bill</option>
+            <option value="Water">Water Bill</option>
+            <option value="Telephone">Telephone Bill</option>
+            </select> <br/>
+            <br/>
     
             <label for="dueDate"><b>Due Date:</b></label>
-            <input type="date" id="dueDate" name="dueDate"><br>
+            <input type="date" id="dueDate" name="dueDate"><br/>
+            <br/>
     
             <label for="reminderTime"><b>Reminder Time:</b></label>
-            <input type="time" id="reminderTime" name="reminderTime"><br>
+            <input type="time" id="reminderTime" name="reminderTime"><br/>
+            <br/>
     
             <label for="reminderInterval"><b>Reminder Interval:</b></label>
             <select id="reminderInterval" name="reminderInterval">
                 <option value="monthly">Monthly</option>
                 <option value="weekly">Weekly</option>
                 <option value="daily">Daily</option>
-            </select>
+            </select><br/>
+            <br/>
+
     
             <button type="button" onclick="checkFields()">Set Reminder</button>
 	</form>
