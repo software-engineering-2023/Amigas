@@ -85,7 +85,7 @@
 
         <div class="container">
             <label for="uname"><b>Bank account number (To transfer from)</b></label>
-            <input type="text" id="Username" placeholder="Enter Username"  required>
+            <input type="text" id="Username" placeholder="Enter number"  required>
 
             <label for="psw"><b>IBAN</b></label>
             <input  type="text" id="Password" placeholder="Enter IBAN"  required>
@@ -108,6 +108,7 @@
 
             <button id="exchange" onclick="javascript:exchange()" class="float-left submit-button">Exchange Rates</button>
 
+            <div id="amountDisplay"><b> Amount Transferred: </b></div>
 
             <button id="myButton" onclick="javascript:convertCurrency()" class="float-left submit-button">Transfer</button>
             </form>
@@ -142,8 +143,11 @@
 		function convertCurrency(event) {
 			event.preventDefault();
 			const amount = document.getElementById("amount").value;
-			const from = document.getElementById("from").value;
-			const to = document.getElementById("to").value;
+			const from = document.getElementById("currencycurr").value;
+			const to = document.getElementById("currency").value;
+           const name = document.getElementById("name").value;
+           const accountnum = document.getElementById("accountnum").value;
+        const amountDisplay = document.getElementById("amountDisplay");
 			let result= 0;
 
 			if (from === to) {
@@ -161,11 +165,11 @@
 			} else {
 				document.getElementById("result").innerHTML = result.toFixed(2);
 			}
+  amountDisplay.innerText = `Amount transferred: ${resuult} ${to} to ${name}'s account (${accountnum}).`;
+
 		}
 
-		// Add event listener to form submission
-		document.querySelector("form").addEventListener("submit", convertCurrency);
-
+		
                   
 
 
