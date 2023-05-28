@@ -152,9 +152,12 @@ function exchange(){
             else if(currency=="EGP"){
                 res=Number(amount)*rates[currencycurr];
             }
+            <p id ="output"></p>
+    
+    const resu=  document.getElementById("output").innerHTML += res +"<br>";
+      document.getElementById("output").innerHTML += typeof res
 
-
-  amountDisplay.innerText = `Amount transferred: ${Number(res)} ${currency} to ${name}'s account (${accountnum}).`;
+  amountDisplay.innerText = `Amount transferred: ${resu} ${currency} to ${name}'s account (${accountnum}).`;
 }
 
          //  var x= parseInt.getElementById("amount");
