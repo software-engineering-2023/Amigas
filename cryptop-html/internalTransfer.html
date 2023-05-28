@@ -84,23 +84,40 @@
        
 
         <div class="container">
-            <label for="uname"><b>Enter your Email</b></label>
-            <input type="text" id="email" placeholder="Enter email"  required>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="Username" placeholder="Enter Username"  required>
+
+            <label for="psw"><b>Password</b></label>
+            <input  type="password" id="Password" placeholder="Enter Password"  required>
+
+            <label for="psw"><b>Amount</b></label> <br />
+            <input  type="number" id="amount" placeholder="Enter amount"  required><br />
+
+            <label for="psw"><b>Currency</b></label>
+            <input  type="text" id="currency" placeholder="Enter currency"  required>
+
+            <label for="psw"><b>Reciever's name</b></label>
+            <input  type="text" id="name" placeholder="Enter name"  required>
+            
+            <label for="psw"><b>Reciever's bank account number</b></label>
+            <input  type="text" id="accountnum" placeholder="Enter account number"  required>
 
           
 
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Send</button>
+            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
             </form>
             <script type="text/javascript">
-
+                //  var x= parseInt.document.getElementById("amount");
+                //  var str=x.toString();
 
                 function loginfunc() {
-                  
-                        alert("Please check your email. Resetting password steps have been sent.");
-                    
+                 alert("Amount transferred. " );
+                //  + document.getElementById("name").value + "is equal to" + xstr
                 }
             </script>
            
+        </div>
+        
          
 
            

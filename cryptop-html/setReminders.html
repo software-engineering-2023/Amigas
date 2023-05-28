@@ -50,13 +50,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                             <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                               
-                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="signup.html"> Sign Up</a>
+
+                                    <a class="nav-link" href="setReminders.html"> Set Reminder</a>
+
                                 </li>
                             </ul>
                             <div class="user_option">
@@ -70,41 +67,66 @@
             </div>
         </header>
         <!-- end header section -->
-        
     </div>
 
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
             <h2>
-                Please enter your credentials below
+                Set Bill Reminders
             </h2>
         </div>
-      
-       
 
         <div class="container">
-            <label for="uname"><b>Enter your Email</b></label>
-            <input type="text" id="email" placeholder="Enter email"  required>
-
-          
-
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Send</button>
-            </form>
-            <script type="text/javascript">
-
-
-                function loginfunc() {
-                  
-                        alert("Please check your email. Resetting password steps have been sent.");
+               
                     
-                }
-            </script>
-           
-         
+            <label for="billName"><b>Bill Name:</b></label>
+            <input type="text" id="billName" name="billName"><br>
+    
+            <label for="dueDate"><b>Due Date:</b></label>
+            <input type="date" id="dueDate" name="dueDate"><br>
+    
+            <label for="reminderTime"><b>Reminder Time:</b></label>
+            <input type="time" id="reminderTime" name="reminderTime"><br>
+    
+            <label for="reminderInterval"><b>Reminder Interval:</b></label>
+            <select id="reminderInterval" name="reminderInterval">
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+            </select>
+    
+            <button type="button" onclick="checkFields()">Set Reminder</button>
+	</form>
 
-           
+	<div id="popup" style="display:none;">
+		<p>Reminder set!</p>
+		<button onclick="hidePopup()">OK</button>
+	</div>
 
+	<script>
+		function checkFields() {
+            var billName = document.getElementById("billName").value;
+			var dueDate = document.getElementById("dueDate").value;
+			var reminderTime = document.getElementById("reminderTime").value;
+            var reminderInterval = document.getElementById("reminderInterval").value;
+
+			if (dueDate && reminderTime && billName && reminderInterval) {
+				showPopup();
+			} else {
+				alert("Please fill in all fields.");
+			}
+		}
+
+		function showPopup() {
+			document.getElementById('popup').style.display = 'block';
+		}
+
+		function hidePopup() {
+			document.getElementById('popup').style.display = 'none';
+		}
+	</script>
+          
      
     </section>
     <!-- end how section -->

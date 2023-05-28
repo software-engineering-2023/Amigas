@@ -50,13 +50,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                             <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                               
-                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="signup.html"> Sign Up</a>
+
+                                    <a class="nav-link" href="CloseAcc.html"> Close Account</a>
+
                                 </li>
                             </ul>
                             <div class="user_option">
@@ -70,41 +67,28 @@
             </div>
         </header>
         <!-- end header section -->
-        
     </div>
 
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
             <h2>
-                Please enter your credentials below
+                Please fill the below form
             </h2>
         </div>
-      
-       
 
         <div class="container">
-            <label for="uname"><b>Enter your Email</b></label>
-            <input type="text" id="email" placeholder="Enter email"  required>
-
-          
-
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Send</button>
-            </form>
-            <script type="text/javascript">
-
-
-                function loginfunc() {
-                  
-                        alert("Please check your email. Resetting password steps have been sent.");
+               
                     
-                }
-            </script>
-           
-         
+                    <label for="accountNumber"><b>Account Number:</b></label>
+                    <input type="text" id="accountNumber" placeholder="accountNumber"  required><br>
 
-           
-
+                    <label for="reason"><b>Reason for closing:</b></label>
+                    <input type="text" id="reason" placeholder="reason"  required><br>
+            
+                    <button type="submit">Submit</button>
+               
+          
      
     </section>
     <!-- end how section -->

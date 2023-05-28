@@ -50,13 +50,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                             <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                               
-                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="signup.html"> Sign Up</a>
+
+                                    <a class="nav-link" href="ApplyPLoan.html"> Apply for Personal Loan</a>
+
                                 </li>
                             </ul>
                             <div class="user_option">
@@ -70,41 +67,113 @@
             </div>
         </header>
         <!-- end header section -->
-        
     </div>
 
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
             <h2>
-                Please enter your credentials below
+                Please enter your information below
             </h2>
         </div>
-      
-       
 
         <div class="container">
-            <label for="uname"><b>Enter your Email</b></label>
-            <input type="text" id="email" placeholder="Enter email"  required>
+            <label for="name"><b>Name</b></label>
+            <input type="text" id="Name" placeholder="Name"  required>
 
-          
+            <label for="mbl"><b>MobileNumber</b></label>
+            <input  type="text" id="Mobile Number" placeholder="Mobile Number"  required> <br/>
 
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Send</button>
+            <label for="mail"><b>E-mail</b></label>
+            <input  type="text" id="E-mail" placeholder="E-mail"  required> <br/>
+
+            <label for="NID"><b>National ID</b></label>
+            <input  type="text" id="National ID" placeholder="National ID"  required> <br/>
+
+            <label for="cust"><b>Amigas Customer?</b></label>
+            <select name="Customer?" id="Customer">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+            </select> <br/>
+
+            <label for="Ctype"><b>Customer Type</b></label>
+            <select name="Customer Type" id="Customer Type">
+            <option value="Payroll with Amigas">PayrollBank</option>
+            <option value="Payroll with another bank">Payrollanother</option>
+            <option value="Non-payroll">Non-payroll</option>
+            <option value="Self-employed">Self-employed</option>
+            </select> <br/>
+
+            <label for="City"><b>City</b></label>
+            <input  type="text" id="City" placeholder="City"  required>
+
+            <label for="Area"><b>Area</b></label>
+            <input  type="text" id="Area" placeholder="Area"  required>
+
+            <header>
+                <b>Net Monthly Income</b>
+            </header>
+            <body>
+                <div class="value left">Min 3,000 EGP</div>
+                <input type="range" id="scale" name="scale" min="3000" max="100000" value="3000" oninput="updateValue()">
+                <div class="value right">Max 100,000 EGP</div>
+                <p id="scaleValue">3,000 EGP</p>
+            
+                <script>
+                    function updateValue() {
+                        var value = document.getElementById("scale").value;
+                        document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
+                    }
+                </script>
+            </body>
+
+
+            <header>
+                <b>Requested Loan Amount</b>
+            </header>
+            <body>
+                <div class="value left">Min 1000 EGP</div>
+                <input type="range" id="scale" name="scale" min="1000" max="2500000" value="1000" oninput="updateValue()">
+                <div class="value right">Max 2,500,000 EGP</div>
+                <p id="scaleValue">1000 EGP</p>
+            
+                <script>
+                    function updateValue() {
+                        var value = document.getElementById("scale").value;
+                        document.getElementById("scaleValue").innerHTML = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " EGP";
+                    }
+                </script>
+            </body>
+
+            
+
+            
+            
+
+            <label for="Jobtitle"><b>Job Title</b></label>
+            <input  type="text" id="Job Title" placeholder="Job Title"  required>
+
+            <input type="checkbox" id="verification" name="verification" value="verification">
+            <label for="verification"> By checking this box, the customer gives 
+                the Bank the authority to disclose all/part of his/her 
+                data and information. This includes checking the borrower’s I-Score, 
+                which may be required for the request to be approved. 
+                The Bank also maintains the right to make inquiries about 
+                the customer at other banks, the Central Bank of Egypt, or similar entities</label><br>
+            
+
+            <input type="checkbox" id="accept/reject" name="accept/reject" value="accept/reject">
+            <label for="accept/reject">The Bank retains the right to approve or reject the 
+                request at its discretion and based on the fulfillment of the customer 
+                verification procedure and the completion and submission of the required 
+                original documents (including the application form), in line with Bank policy</label><br>
+
+                
+
+
+
+            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Apply</button>
             </form>
-            <script type="text/javascript">
-
-
-                function loginfunc() {
-                  
-                        alert("Please check your email. Resetting password steps have been sent.");
-                    
-                }
-            </script>
-           
-         
-
-           
-
      
     </section>
     <!-- end how section -->
