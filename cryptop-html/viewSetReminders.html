@@ -68,41 +68,42 @@
          </div>
      </header>
  </div>
-
  <section class="how_section layout_padding">
     <div class="heading_container">
         <h2>
-            What would you like to do
+            My Set Reminders
         </h2>
     </div>
     <div class="how_container">
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:viewIssues()">
-                View Technical Issues
-            </div>
-            <script type="text/javascript">
-                function viewIssues() 
-                {
-                    location.href = "viewTechnicalIssues.html";
+        <div class="box" style="width: 700pt; height: 200pt;">
+            
+            <table style="border:1px solid black ; width: 800pt; height: 200pt; position: relative; left: -40pt;">
+                <tr style="border: 1px solid black ;">
+                  <th style="border:1px solid black; width: 300pt;">Reminder</th>
+                  <th style="border:1px solid black; width: 250pt;">date to recieve the reminder</th>
+                  <th style="border:1px solid black; width: 250pt;">date created</th>
+                </tr>
+                <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 300pt;">Gas bill</th>
+                    <th style="border:1px solid black; width: 250pt;">1st of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">01/05/2020</th>
+                  </tr>
 
-                }
-            </script>
-        </div>
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">credit card payment </th>
+                    <th style="border:1px solid black; width: 300pt;">12th of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">16/01/2021</th>
+                  </tr>
 
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:notify()">
-                Notify Client 
-            </div>
-            <script type="text/javascript">
-                function notify() 
-                {
-                    location.href = "notifyClient.html";
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">electricity bill </th>
+                    <th style="border:1px solid black; width: 300pt;">25th of every month</th>
+                    <th style="border:1px solid black; width: 250pt;">13/04/2022</th>
+                  </tr>
+              </table>
 
-                }
-            </script>
+
         </div>
     </div>
- </section>
-
+</section>
 </body>
-</html>

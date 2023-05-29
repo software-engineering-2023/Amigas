@@ -102,7 +102,7 @@
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
 
-          
+            <div id="amountDisplay"><b> Amount Transferred: </b></div>
 
             <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
             </form>
@@ -110,10 +110,21 @@
                 //  var x= parseInt.document.getElementById("amount");
                 //  var str=x.toString();
 
-                function loginfunc() {
-                 alert("Amount transferred. " );
+                // function loginfunc() {
+                //  alert("Amount transferred. " );
                 //  + document.getElementById("name").value + "is equal to" + xstr
-                }
+                // }
+
+                function loginfunc() {
+  const username = document.getElementById("Username").value;
+  const password = document.getElementById("Password").value;
+  const amount = document.getElementById("amount").value;
+  const currency = document.getElementById("currency").value;
+  const name = document.getElementById("name").value;
+  const accountnum = document.getElementById("accountnum").value;
+  const amountDisplay = document.getElementById("amountDisplay");
+  amountDisplay.innerText = `Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).`;
+}
             </script>
            
         </div>

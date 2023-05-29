@@ -105,8 +105,9 @@
             <label for="psw"><b>Reciever's bank account number</b></label>
             <input  type="text" id="accountnum" placeholder="Enter account number"  required>
 
-            <label for="psw"><b>Please note there is an additional amount of 20 EGP as adminstrative fees.</b></label>
-          
+            <label for="psw"><b>Please note there is an additional amount of 30 EGP as adminstrative fees.</b></label>
+            <div id="amountDisplay"><b> Amount Transferred: </b></div>
+
 
             <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
             </form>
@@ -114,10 +115,22 @@
                 //  var x= parseInt.document.getElementById("amount")+20;
                 //  var str=x.toString();
 
-                function loginfunc() {
-                 alert("Amount transferred. "  );
+                // function loginfunc() {
+                //  alert("Amount transferred. "  );
                 // + document.getElementById("name").value + "is equal to" + str
-                }
+                // }
+
+
+                function loginfunc() {
+  const username = document.getElementById("Username").value;
+  const password = document.getElementById("Password").value;
+  const amount = Number(document.getElementById("amount").value) + Number(30);
+  const currency = document.getElementById("currency").value;
+  const name = document.getElementById("name").value;
+  const accountnum = document.getElementById("accountnum").value;
+  const amountDisplay = document.getElementById("amountDisplay");
+  amountDisplay.innerText = `Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).`;
+}
             </script>
            
         </div>

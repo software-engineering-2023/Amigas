@@ -69,40 +69,37 @@
      </header>
  </div>
 
+
  <section class="how_section layout_padding">
     <div class="heading_container">
         <h2>
-            What would you like to do
+            Fill the form to send a notification
         </h2>
     </div>
-    <div class="how_container">
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:viewIssues()">
-                View Technical Issues
-            </div>
-            <script type="text/javascript">
-                function viewIssues() 
-                {
-                    location.href = "viewTechnicalIssues.html";
 
-                }
-            </script>
-        </div>
-
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:notify()">
-                Notify Client 
-            </div>
-            <script type="text/javascript">
-                function notify() 
-                {
-                    location.href = "notifyClient.html";
-
-                }
-            </script>
-        </div>
-    </div>
+    <form>
+        <label for="retailer">Select a client: </label>
+        <select id="retailer" name="retailerName">
+          <option value="Zeina Oraby">Zeina</option>
+          <option value="Hana Mohamed">Hana</option>
+          <option value="Youssef Mostafa">Youssef</option>
+          <option value="Nelly Sahmoud">Nelly</option>
+        </select>
+      <br><br /><br />
+        <label for="points">Enter the content of the notification:</label> 
+        <input type="text" id="notification" placeholder="notification content"  required><br />
+      
+       <br>
+        <button id = "submit" type="submit" style= "color: black;  width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "notify()">
+            Send
+        </button>
+        
+        <script>
+            function notify() {
+                alert("Notification sent Successfully!");
+            }
+        </script>
+  
+          <!-- <div style="background-color: white; font-size: 24px; margin-bottom: 50px;"> -->
+    </form>
  </section>
-
-</body>
-</html>

@@ -68,41 +68,44 @@
          </div>
      </header>
  </div>
-
  <section class="how_section layout_padding">
     <div class="heading_container">
         <h2>
-            What would you like to do
+            Recieved Reminders
         </h2>
     </div>
     <div class="how_container">
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:viewIssues()">
-                View Technical Issues
-            </div>
-            <script type="text/javascript">
-                function viewIssues() 
-                {
-                    location.href = "viewTechnicalIssues.html";
+        <div class="box" style="width: 700pt; height: 200pt;">
+            
+            <table style="border:1px solid black ; width: 800pt; height: 200pt; position: relative; left: -40pt;">
+                <tr style="border: 1px solid black ;">
+                  <th style="border:1px solid black; width: 500pt;">Reminder</th>
+                  <th style="border:1px solid black; width: 300pt;">date recieved</th>
+                </tr>
 
-                }
-            </script>
-        </div>
+                <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">We are reminding you that your loan installment is due next week on the 18th of may 2021</th>
+                    <th style="border:1px solid black; width: 300pt;">01/05/2020</th>
+                  </tr>
+                <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">Here is a reminder to make a donation </th>
+                    <th style="border:1px solid black; width: 300pt;">13/04/2023</th>
+                  </tr>
+                
 
-        <div class="box">
-            <div class="img-box" style="font-size: x-large;align-items: center; font-weight: bold;" onclick="javascript:notify()">
-                Notify Client 
-            </div>
-            <script type="text/javascript">
-                function notify() 
-                {
-                    location.href = "notifyClient.html";
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">We are reminding you to pay your gas bill within this week</th>
+                    <th style="border:1px solid black; width: 300pt;">11/05/2023</th>
+                  </tr>
 
-                }
-            </script>
+                  <tr style="border: 1px solid black ;">
+                    <th style="border:1px solid black; width: 500pt;">Here is a reminder to make a donation </th>
+                    <th style="border:1px solid black; width: 300pt;">13/06/2023</th>
+                  </tr>
+              </table>
+
+
         </div>
     </div>
- </section>
-
+</section>
 </body>
-</html>
