@@ -78,9 +78,12 @@
     </div>
 
 <div>
-  <div style="background-color: white; font-size: 24px; margin-bottom: 160px;">
-    
+
+  <div id = "1" style="background-color: white; 
+  font-size: 30px; margin-bottom: 180px; align-items: center; font-weight: bold;">
+    Your Points Balance is 1300 points
   </div>
+
     <form>
       <label for="retailer">Select a retailer: </label>
       <select id="retailer" name="retailerName">
@@ -115,8 +118,11 @@
        
        <!-- window.open("mabrookPoints.html", "_blank"); -->
        var curr = 1300 - document.getElementById("points").value;
-       alert ("Congratulations! You have earned " + document.getElementById("points").value + 
-      " points. Your current balance is " + curr + ".");
+
+      document.getElementById("1").textContent = "Congratulations! You have earned " + document.getElementById("points").value + 
+      " points at " + document.getElementById("retailer").value +"."+ " Your current balance is " + curr + ".";
+      document.getElementById("1").innerHTML = document.getElementById("1").textContent;
+      event.preventDefault();
        }
       }
 
