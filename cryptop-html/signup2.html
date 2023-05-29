@@ -53,17 +53,6 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="about.html"> About </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="how.html"> How </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="wallet1.html">
-                                        <span>Wallet</span> <img src="images/wallet.png" alt="" />
-                                    </a>
-                                </li>
                                 <li class="nav-item">
 
                                     <a class="nav-link" href="login.html"> Login</a>
@@ -104,7 +93,7 @@
             <input  type="text" id="BankID" placeholder="Enter national ID"  required>
 
 
-            <button id="myButton" onclick="javascript:signupfunc()" class="float-left submit-button">Sign up</button>
+            <button style="font-weight: bold;" id="myButton" onclick="javascript:signupfunc()" class="float-left submit-button">Sign up</button>
             </form>
             <script type="text/javascript">
 
@@ -334,9 +323,15 @@
                         </h5>
                         <form action="">
                             <input type="email" placeholder="Enter your email" />
-                            <button>
+                            <button style="font-weight: bold;" onClick = "subscribeLabel()">
                                 Subscribe
                             </button>
+                            
+                            <script>
+                                function subscribeLabel() {
+                                    alert("Thanks for subscribing!");
+                                }
+                            </script>
                         </form>
                     </div>
                 </div>

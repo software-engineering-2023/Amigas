@@ -93,7 +93,7 @@
             <input  type="text" id="BankID" placeholder="Enter bank ID"  required>
 
 
-            <button id="myButton" onclick="javascript:signupfunc()" class="float-left submit-button">Sign up</button>
+            <button style="font-weight: bold;" id="myButton" onclick="javascript:signupfunc()" class="float-left submit-button">Sign up</button>
             </form>
             <script type="text/javascript">
 
@@ -323,9 +323,15 @@
                         </h5>
                         <form action="">
                             <input type="email" placeholder="Enter your email" />
-                            <button>
+                            <button style="font-weight: bold;" onClick = "subscribeLabel()">
                                 Subscribe
                             </button>
+                            
+                            <script>
+                                function subscribeLabel() {
+                                    alert("Thanks for subscribing!");
+                                }
+                            </script>
                         </form>
                     </div>
                 </div>
