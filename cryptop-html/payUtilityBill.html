@@ -74,50 +74,47 @@
      </header>
  </div>
 
- <section class="how_section layout_padding">
-    <div class="heading_container">
-        <h2>
-            Paying utility bill
-        </h2>
+    <section class="how_section layout_padding">
+        <div class="heading_container">
+            <h2>
+                Paying utility bill
+            </h2>
+         </div>
 
-        
-    </div>
+        <form>
+            <label for="retailer">Select a bill: </label>
+            <select id="retailer" name="retailerName">
+                <option value="Gas bill">Gas bill</option>
+                <option value="Water bill">Water bill</option>
+                <option value="Electricity bill">Electricity bill</option>
+                <option value="Telephone bill">Telephone bill</option>
+            </select>
+            <br><br /><br />
 
-    <form>
-        <label for="retailer">Select a bill: </label>
-        <select id="retailer" name="retailerName">
-          <option value="Gas bill">Gas bill</option>
-          <option value="Water bill">Water bill</option>
-          <option value="Electricity bill">Electricity bill</option>
-          <option value="Telephone bill">Telephone bill</option>
-        </select>
-      <br><br /><br />
-      <label for="Acc.Number">Account no. (The account you wish to pay from):</label>
-      <input type="text" id="account no." style=" border-width: 0.5pt;  width: 130pt; height: 20pt;" required>
-      <br>
-      <label for="bill-amount"><b>Bill Amount:</b> </label>
-	<input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br>
+            <label for="Acc.Number">Account no. (The account you wish to pay from):</label>
+            <input type="text" id="account no." style=" border-width: 0.5pt;  width: 130pt; height: 20pt;" required>
+            <br>
+            <label for="bill-amount"><b>Bill Amount:</b> </label>
+	        <input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br>
 
-      <label for="payment-amount">Payment Amount:</label>
-      <input type="number" id="payment-amount" step="5"><br><br>
+            <label for="payment-amount">Payment Amount:</label>
+            <input type="number" id="payment-amount" step="5"><br><br>
 
       
       
-       <br>
-        <button id = "pay" type="pay" style= " width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onclick="pay()">
-            pay 
-        </button>
+            <br>
+            <button id = "pay" type="pay" style= " width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onclick="pay()">
+              pay 
+            </button>
         
-        <script>
-            function pay() 
-            {
-                alert("Payment done Successfully!");
-            }
-        </script>
-  
-          <!-- <div style="background-color: white; font-size: 24px; margin-bottom: 50px;"> -->
-    </form>
- </section>
+            <script>
+                function pay() 
+                {
+                    alert("Payment done Successfully!");
+                }
+            </script>
+        </form>
+    </section>
 <!-- app section -->
 
 <section class="app_section">
