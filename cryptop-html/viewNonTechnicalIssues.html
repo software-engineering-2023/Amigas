@@ -128,12 +128,21 @@
                   <label id="mod1" style=" font-weight: bold; font-size: 15pt;">
                     Enter the id of the request you wish to update
                  </label>
-                 <input type="text" id="fname" name="fname" style="width: 80pt; height: 20pt;">
+                 <input type="text" id="fname" name="fname" style="width: 80pt; height: 20pt;"><br/>
+
                  <button style="width: 130pt; height: 40pt; font-weight: bold; align-items: center" onclick="javascript:updateStatus()">resolve issue</button>
                                 <script type="text/javascript">
                                     function updateStatus() 
                                     {
-                                        location.href = "updatedNonTechnicalIssues.html";
+                                        var ID = document.getElementById("fname").value;
+
+                                        if(ID === ""){
+                                            alert("Please write an ID!")
+                                        }
+                                        else{
+                                            location.href = "updatedNonTechnicalIssues.html";
+                                        }
+                                      
         
                                     }
                                 </script>

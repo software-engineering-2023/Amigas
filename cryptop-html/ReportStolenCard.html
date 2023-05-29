@@ -106,15 +106,28 @@
             <label for="uname"><b>Describe the incident in detail (If credit card was stolen and you filed a police report,
                  please include police report number)</b></label> <br />
             <td><textarea type="text" id='w4' style="height:200px; width:1000px;font-size:14pt"></textarea></td>
+
             <button id="myButton" onclick="javascript:problemfunc()" class="float-left submit-button">Submit & apply for replacement card</button>
             </form>
             <script type="text/javascript">
 
+            function problemfunc() {
+                    var name = document.getElementById("Username").value;
+                    var password = document.getElementById("Password").value;
+                    var email = document.getElementById("email").value;
+                    var CardN = document.getElementById("cardID").value;
+                    var reason = document.getElementById("options").value;
+                    var incident = document.getElementById("w4").value;
 
-                function problemfunc() {
-                  //  alert("Thank you for submitting. We will check the problem and get back to you via your e-mail.");
-                    location.href= "replacementCard.html";
+                     // Check if all fields are filled
+                    if (name === "" || password === "" || email === "" || CardN === "" || reason === "" || incident === "") {
+                    alert("Please fill in all fields");
+                    } else {
+
+                        location.href= "replacementCard.html";
                 }
+                
+            }
             </script>
            
         </div>

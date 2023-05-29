@@ -89,28 +89,35 @@
             <input  type="password" id="Password" placeholder="Enter Password"  required>
 
             <label for="uname"><b>Enter your email (We will respond via e-mail)</b></label>
-            <input type="text" id="email" placeholder="Enter E-mail"  required>
+            <input type="text" id="email" placeholder="Enter Email"  required>
 
 
             <label for="uname"><b>Describe your problem in detail</b></label> <br />
             <td><textarea type="text" id='w4' style="height:200px; width:1000px;font-size:14pt"></textarea></td>
+
             <button id="myButton" onclick="javascript:problemfunc()" class="float-left submit-button">Submit</button>
             </form>
             <script type="text/javascript">
 
 
                 function problemfunc() {
+                    var name = document.getElementById("Username").value;
+                    var password = document.getElementById("Password").value;
+                    var email = document.getElementById("email").value;
+                    var problem = document.getElementById("w4").value;
+
+                     // Check if all fields are filled
+                    if (name === "" || password === "" || email === "" || problem === "") {
+                    alert("Please fill in all fields");
+                    } else {
+
                     alert("Thank you for submitting. We will check the problem and get back to you via your e-mail.");
                 }
+                
+            }
             </script>
            
         </div>
-        
-                
-         
-
-           
-
      
     </section>
     <!-- end how section -->

@@ -84,31 +84,46 @@
 
         <div class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text" id="Username" placeholder="Enter Username"  required>
+            <input type="text" id="Username" placeholder="Enter Username"  required><br/>
+            <br/>
 
             <label for="psw"><b>Password</b></label>
-            <input  type="password" id="Password" placeholder="Enter Password"  required>
+            <input  type="password" id="Password" placeholder="Enter Password"  required><br/>
+            <br/>
 
             <label for="uname"><b>Enter your email (We will respond via e-mail)</b></label>
-            <input type="text" id="email" placeholder="Enter E-mail"  required>
+            <input type="text" id="email" placeholder="Enter E-mail"  required><br/>
+            <br/>
 
             <label for="uname"><b>Enter your card number:</b></label>
-            <input type="text" id="cardID" placeholder="Enter card"  required>
+            <input type="text" id="cardID" placeholder="Enter card"  required><br/>
+            <br/>
 
-            <label for="uname"><b>Enter your card expiry date:</b></label><br />
-            <input type="date" id="expirydate" placeholder="Enter expiry date"  required>
-
-
+            <label for="uname"><b>Enter your card expiry date:</b></label>
+            <input type="date" id="expirydate" placeholder="Enter expiry date"  required><br/>
+            <br/>
            
             <button id="myButton" onclick="javascript:problemfunc()" class="float-left submit-button">Submit</button>
             </form>
             <script type="text/javascript">
 
 
-                function problemfunc() {
+            function problemfunc() {
+                    var name = document.getElementById("Username").value;
+                    var password = document.getElementById("Password").value;
+                    var email = document.getElementById("email").value;
+                    var CardN = document.getElementById("cardID").value;
+                    var Expire = document.getElementById("expirydate").value;
+
+                     // Check if all fields are filled
+                    if (name === "" || password === "" || email === "" || CardN === "" || Expire === "") {
+                    alert("Please fill in all fields");
+                    } else {
+
                     alert("Thank you for submitting. We will check the problem and get back to you via your e-mail.");
-                    
                 }
+                
+            }
             </script>
            
         </div>

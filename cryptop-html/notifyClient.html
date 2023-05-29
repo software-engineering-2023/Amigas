@@ -78,25 +78,35 @@
     </div>
 
     <form>
-        <label for="retailer">Select a client: </label>
+        <label for="retailer"><b>Select a client: </b></label>
         <select id="retailer" name="retailerName">
           <option value="Zeina Oraby">Zeina</option>
           <option value="Hana Mohamed">Hana</option>
           <option value="Youssef Mostafa">Youssef</option>
           <option value="Nelly Sahmoud">Nelly</option>
-        </select>
-      <br><br /><br />
-        <label for="points">Enter the content of the notification:</label> 
-        <input type="text" id="notification" placeholder="notification content"  required><br />
-      
+        </select><br/>
+      <br>
+
+        <label for="points"><b>Enter the content of the notification:</b></label> 
+        <input type="text" id="notification" placeholder="Enter Notification content"  required><br/>
        <br>
+
         <button id = "submit" type="submit" style= "width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "notify()">
             Send
         </button>
         
         <script>
             function notify() {
+            var retailer = document.getElementById("retailer").value;
+            var notification = document.getElementById("notification").value;
+
+            if(retailer === "" || notification === ""){
+                alert("Please fill in all fields")
+            }
+            else{
                 alert("Notification sent Successfully!");
+            }
+
             }
         </script>
   

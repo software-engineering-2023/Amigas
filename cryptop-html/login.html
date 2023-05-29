@@ -96,6 +96,10 @@
 
 
                 function loginfunc() {
+                     // Get the value of each input field
+                    var name = document.getElementById("Username").value;
+                    var password = document.getElementById("Password").value;
+
                     if (document.getElementById("Username").value == "nada.ibrahim"
                         && document.getElementById("Password").value == "nada123") {
                         location.href = "client.html";
@@ -109,10 +113,16 @@
                         && document.getElementById("Password").value == "banker123") {
                         location.href = "banker.html";
                     }
+                    else if (name === "" || password === "" ) {
+                        alert("Please fill in all fields");
+                    }
+
                     else {
+
                         alert("You are not a user. Please sign up.");
                     }
                 }
+
             </script>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me

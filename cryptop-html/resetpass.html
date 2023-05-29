@@ -80,18 +80,24 @@
 
         <div class="container">
             <label for="uname"><b>Enter your Email</b></label>
-            <input type="text" id="email" placeholder="Enter email"  required>
+            <input type="text" id="email" placeholder="Enter email"  required><br/>
+            <br/>
 
-          
-
+        
             <button style="font-weight: bold;" id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Send</button>
             </form>
             <script type="text/javascript">
 
 
                 function loginfunc() {
-                  
+                    var email = document.getElementById("email").value;
+
+                    if(email === ""){
+                        alert("Please enter your email")
+                    }
+                    else{
                         alert("Please check your email. Resetting password steps have been sent.");
+                    }
                     
                 }
             </script>
