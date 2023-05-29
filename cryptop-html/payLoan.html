@@ -61,82 +61,64 @@
                                          <span>Logout</span>
                                      </a>
                                  </li>
+                                    
+
+                                </li>
                             </ul>
+                            
                         </div>
                     </div>
                 </nav>
             </div>
         </header>
         <!-- end header section -->
-        
     </div>
 
     <!-- how section -->
     <section class="how_section layout_padding">
         <div class="heading_container">
-            <h2>
-                Making an internal transfer <br><br>
-                Please enter your credentials below
-            </h2>
+            <title><b>Loan installment Payment</b></title>
         </div>
-      
-       
 
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" id="Username" placeholder="Enter Username"  required>
+	<script>
+		function payBill() {
+			// Get the user input values
+			let billAmount = parseFloat(document.getElementById("bill-amount").value);
+			let paymentAmount = parseFloat(document.getElementById("payment-amount").value);
 
-            <label for="psw"><b>Password</b></label>
-            <input  type="password" id="Password" placeholder="Enter Password"  required>
+			// Calculate the remaining balance after payment
+			let remainingBalance = billAmount - paymentAmount;
 
-            <label for="psw"><b>Amount</b></label> <br />
-            <input  type="number" id="amount" placeholder="Enter amount"  required><br />
-
-            <label for="psw"><b>Currency</b></label>
-            <input  type="text" id="currency" placeholder="Enter currency"  required>
-
-            <label for="psw"><b>Reciever's name</b></label>
-            <input  type="text" id="name" placeholder="Enter name"  required>
-            
-            <label for="psw"><b>Reciever's bank account number</b></label>
-            <input  type="text" id="accountnum" placeholder="Enter account number"  required>
-
-            <div id="amountDisplay"><b> Amount Transferred: </b></div>
-
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Transfer</button>
-            </form>
-            <script type="text/javascript">
-                //  var x= parseInt.document.getElementById("amount");
-                //  var str=x.toString();
-
-                // function loginfunc() {
-                //  alert("Amount transferred. " );
-                //  + document.getElementById("name").value + "is equal to" + xstr
-                // }
-
-                function loginfunc() {
-  const username = document.getElementById("Username").value;
-  const password = document.getElementById("Password").value;
-  const amount = document.getElementById("amount").value;
-  const currency = document.getElementById("currency").value;
-  const name = document.getElementById("name").value;
-  const accountnum = document.getElementById("accountnum").value;
-  const amountDisplay = document.getElementById("amountDisplay");
-  amountDisplay.innerText = `Amount transferred: ${amount} ${currency} to ${name}'s account (${accountnum}).`;
-}
-            </script>
-           
-        </div>
-        
-         
-
-           
-
-     
-    </section>
+			// Display a message to the user indicating whether the payment was successful
+			if (paymentAmount > billAmount) {
+				alert("The payment amount exceeds the loan installment. Please enter a valid payment amount.");
+			} else if (paymentAmount === billAmount) {
+				alert("The instalment has been paid in full. Thank you for your payment.");
+			} else if (paymentAmount < billAmount) {
+				alert("The payment of " + paymentAmount.toFixed(2) + " has been processed. The remaining balance is " + remainingBalance.toFixed(2) + ".");
+			} else {
+				alert("Please enter a valid payment amount.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>
+        Loan Installment Payment
+    </h2> 
+    <br/>
+    <label for="Acc.Number">Account no. (The account you wish to pay from):</label>
+      <input type="text" id="account no." style=" border-width: 0.5pt;  width: 130pt; height: 20pt;" required>
+      <br>
+	<label for="bill-amount"><b>Installment Amount:</b> </label>
+	<input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br><br>
+	<label for="payment-amount"><b>Payment Amount:</b></label>
+	<input type="number" id="payment-amount" step="0.01" placeholder="payment amount" required><br><br>
+	<button onclick="payBill()">Pay installment</button> <br><br><br>
+</body>
     <!-- end how section -->
     
-   <!-- app section -->
+     <!-- app section -->
 <section id="app_section">
     <section class="app_section">
         <div class="container">

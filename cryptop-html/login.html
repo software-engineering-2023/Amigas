@@ -88,7 +88,9 @@
             <input  type="password" id="Password" placeholder="Enter Password"  required>
             
 
-            <button id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">Login</button>
+            <button style="font-weight: bold;" id="myButton" onclick="javascript:loginfunc()" class="float-left submit-button">
+                Login
+            </button>
             </form>
             <script type="text/javascript">
 
@@ -333,9 +335,15 @@
                         </h5>
                         <form action="">
                             <input type="email" placeholder="Enter your email" />
-                            <button>
+                            <button style="font-weight: bold;" onClick = "subscribeLabel()">
                                 Subscribe
                             </button>
+                            
+                            <script>
+                                function subscribeLabel() {
+                                    alert("Thanks for subscribing!");
+                                }
+                            </script>
                         </form>
                     </div>
                 </div>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <!-- Basic -->
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <!-- Mobile Metas -->
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ <!-- Site Metas -->
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="author" content="" />
+
+ <title>Amigas Bank</title>
+
+ <!-- slider stylesheet -->
+ <!-- slider stylesheet -->
+ <link rel="stylesheet" type="text/css"
+       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+ <!-- bootstrap core css -->
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+ <!-- fonts style -->
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+ <!-- Custom styles for this template -->
+ <link href="css/style.css" rel="stylesheet" />
+ <!-- responsive style -->
+ <link href="css/responsive.css" rel="stylesheet" />
+ <script defer src="activePage.js"></script>
+
+ <div style="background-color: white;">
+     You are logged in
+   </div>
+
+</head>
+
+<body >
+
+ <div class="hero_area" style="background-color:#ffffff;">
+     <!-- header section strats -->
+     <header class="header_section">
+         <div class="container-fluid">
+             <nav class="navbar navbar-expand-lg custom_nav-container ">
+                 <a class="navbar-brand" href="index.html">
+                     <span>
+                        Amigas Bank
+                     </span>
+                 </a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                         <ul class="navbar-nav  ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="client.html">
+                                    <span>Client Actions</span>
+                                </a>
+                            </li>
+
+                             <li class="nav-item">
+                                 <a class="nav-link" href="index.html">
+                                     <span>Logout</span>
+                                 </a>
+                             </li>
+                             
+                         </ul>
+                     </div>
+                 </div>
+             </nav>
+         </div>
+     </header>
+ </div>
+
+ <section class="how_section layout_padding">
+    <div class="heading_container">
+        <h2>
+            Making a Donation
+        </h2>
+
+        
+    </div>
+
+    <form>
+        <label for="retailer">Select a bill: </label>
+        <select id="retailer" name="retailerName">
+          <option value="Children organisation">Children organisation</option>
+          <option value="Women charity">Women charity</option>
+          <option value="Elderly House">Elderly House</option>
+          <option value="Children Hospital">Children Hospital</option>
+        </select>
+      <br><br /><br />
+      <label for="Acc.Number">Account no. (The account you wish to pay from):</label>
+      <input type="text" id="account no." style=" border-width: 0.5pt;  width: 130pt; height: 20pt;" required>
+      <br>
+      <label for="Donation-amount"><b>Donation Amount:</b> </label>
+	<input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br>
+
+      
+      
+       <br>
+        <button id = "pay" type="pay" style= " width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "javascript:pay()">
+            Donate
+        </button>
+        
+        <script>
+            function pay() 
+            {
+                alert("Thank you for your donation!");
+            }
+        </script>
+  
+          <!-- <div style="background-color: white; font-size: 24px; margin-bottom: 50px;"> -->
+    </form>
+ </section>
+<!-- app section -->
+<section id="app_section">
+    <section class="app_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <h2>
+                            Our Powerful app to connect it all
+                        </h2>
+                        <p>
+                            Download our app to manage your finances easier than ever
+                        </p>
+                        <div class="download_box">
+                            <h5>
+                                Download Now
+                            </h5>
+                            <div class="btn-box">
+                                <a href="">
+                                    <img src="images/app-store.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/play-store.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/slider-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+    <!-- end app section -->
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info_contact">
+                    <div class="info_logo">
+                        <a href="index.html">
+                            <span>
+                                Amigas Bank
+                            </span>
+                        </a>
+                    </div>
+                    <h5>
+                        Contact Us
+                    </h5>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/location.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            Cairo, Egypt
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/phone.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            19991
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/envelope.png" width="18px" alt="" />
+                        </div>
+                        <p>
+                            demo@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info_info">
+                    <h5>
+                        Invest Money
+                    </h5>
+                    <p>
+                       A safe investment, is an investment at Amigas Bank
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-3">
+                <div class="info_form ">
+                    <h5>
+                        Newsletter
+                    </h5>
+                    <form action="">
+                        <input type="email" placeholder="Enter your email" />
+                        <button onClick = "subscribeLabel()">
+                            Subscribe
+                        </button>
+                        
+                        <script>
+                            function subscribeLabel() {
+                                alert("Thanks for subscribing!");
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end info_section -->
+<!-- footer section -->
+<section class="container-fluid footer_section">
+    <p>
+        &copy; 2019 All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+    </p>
+</section>
+<!-- footer section -->
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+
+</script>
+<!-- owl carousel script
+  -->
+<script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        navText: [],
+        center: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+</script>
+<!-- end owl carousel script -->
+</body>
+
+</html>
