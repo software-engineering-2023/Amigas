@@ -84,31 +84,40 @@
     </div>
 
     <form>
-        <label for="retailer">Select a bill: </label>
+        <label for="retailer"><b>Select a bill: </b></label>
         <select id="retailer" name="retailerName">
           <option value="Children organisation">Children organisation</option>
           <option value="Women charity">Women charity</option>
           <option value="Elderly House">Elderly House</option>
           <option value="Children Hospital">Children Hospital</option>
-        </select>
-      <br><br /><br />
-      <label for="Acc.Number">Account no. (The account you wish to pay from):</label>
-      <input type="text" id="account no." style=" border-width: 0.5pt;  width: 130pt; height: 20pt;" required>
-      <br>
-      <label for="Donation-amount"><b>Donation Amount:</b> </label>
-	<input type="number" id="bill-amount" step="0.01" placeholder="bill amount" required><br>
+        </select><br/>
+      <br/>
 
-      
-      
-       <br>
-        <button id = "pay" type="pay" style= " width: 150px; height: 70px; font-size: 16px; margin-top: 10px;" onClick = "javascript:pay()">
-            Donate
-        </button>
+      <label for="Acc.Number"><b>Account no. (The account you wish to pay from):</b></label>
+      <input type="text" id="account no." placeholder="Enter Account number" required style=" border-width: 0.5pt;  width: 160pt; height: 20pt;" required><br/>
+      <br>
+
+      <label for="Donation-amount"><b>Donation Amount:</b> </label>
+	<input type="number" id="bill-amount" placeholder="Enter Bill amount" required><br>
+    <br/>
+
+    <button id = "pay" type="pay" style= " width: 150px; height: 70px; font-size: 16px; margin-top: 10px;"
+    onclick="payBill()">Pay Bill</button>
         
         <script>
-            function pay() 
+            function payBill() 
             {
+                var retail = document.getElementById("retailer").value;
+                var accountnum = document.getElementById("account no.").value;
+                var Bamountt = document.getElementById("bill-amount").value;
+
+                if (retail === "" || accountnum === "" || Bamountt === "") {
+                alert("Please fill in all fields.");
+            }
+            else{
                 alert("Thank you for your donation!");
+            }
+               
             }
         </script>
   

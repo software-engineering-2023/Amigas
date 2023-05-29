@@ -54,16 +54,12 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="client.html">Client Actions<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="index.html">Log out<span class="sr-only">(current)</span></a>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="wallet1.html">
-                    <span>Wallet</span> <img src="images/wallet.png" alt="" />
-                  </a>
-                </li>
+               
                 
               </ul>
               
@@ -78,11 +74,14 @@
     </div>
 
 <div>
-  <div style="background-color: white; font-size: 24px; margin-bottom: 150px;">
-    
+
+  <div id = "1" style="background-color: white; 
+  font-size: 30px; margin-bottom: 180px; align-items: center; font-weight: bold;">
+    Your Points Balance is 1300 points
   </div>
+
     <form>
-      <label for="retailer">Select a retailer: </label>
+      <label for="retailer"><b>Select a retailer:</b> </label>
       <select id="retailer" name="retailerName">
         <option value="Carrefour">Carrefour</option>
         <option value="Seoudi">Seoudi</option>
@@ -90,8 +89,8 @@
         <option value="Zara">Zara</option>
       </select>
     <br>
-      <label for="points">Enter the number of points you want to redeem:</label>
-      <input type="number" id="points" name="points" required>
+      <label for="points"><b>Enter the number of points you want to redeem:</b></label>
+      <input type="number" id="points" name="points" required placeholder="Enter points" required>
     
      <br>
      <button id = "submit" type="submit" onClick = "javascript:validPoints()" style= 
@@ -115,8 +114,11 @@
        
        <!-- window.open("mabrookPoints.html", "_blank"); -->
        var curr = 1300 - document.getElementById("points").value;
-       alert ("Congratulations! You have earned " + document.getElementById("points").value + 
-      " points. Your current balance is " + curr + ".");
+
+      document.getElementById("1").textContent = "Congratulations! You have earned " + document.getElementById("points").value + 
+      " points at " + document.getElementById("retailer").value +"."+ " Your current balance is " + curr + ".";
+      document.getElementById("1").innerHTML = document.getElementById("1").textContent;
+      event.preventDefault();
        }
       }
 

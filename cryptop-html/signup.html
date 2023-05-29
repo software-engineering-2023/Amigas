@@ -93,14 +93,25 @@
             <input  type="text" id="BankID" placeholder="Enter bank ID"  required>
 
 
-            <button style="font-weight: bold;" id="myButton" onclick="javascript:signupfunc()" class="float-left submit-button">Sign up</button>
-            </form>
-            <script type="text/javascript">
+            
+            <button style="font-weight: bold;" id="myButton" onclick="javascript:validateForm()" class="float-left submit-button">Sign up</button>
+    </form>
 
+    <script type="text/javascript">
+      function validateForm() {
+        // Get the value of each input field
+        var name = document.getElementById("Username").value;
+        var password = document.getElementById("Password").value;
+        var BankID = document.getElementById("BankID").value;
 
-                function signupfunc() {
-                  location.href="login.html";
-                }
+        // Check if all fields are filled
+        if (name === "" || password === "" || BankID === "") {
+          alert("Please fill in all fields");
+        } else {
+          // Redirect to another page
+          location.href="login.html";
+        }
+      }
             </script>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
